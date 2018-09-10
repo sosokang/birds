@@ -1,0 +1,145 @@
+<!--pages/detail/detail.wxml-->
+<view class='main'>
+  <view class='main-header'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#7f7f7f" indicator-active-color="#ffffff">
+      <block wx:for="{{imgList}}" wx:key="index">
+        <swiper-item class="swiper-item">
+          <image src="{{item.img_url}}" class="slide-image" />
+          <text class='byauthor'>by: {{item.author}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='main-box'>
+      <image src='../../img/box.png'></image>
+    </view>
+    <!-- <view class='text'>
+      <text>1/</text>
+      <text>30</text>
+    </view> -->
+  </view>
+  <view class='title'>
+    <view class='title-name lt'>{{name}}</view>
+    <view class='img rt' bindtap='audio'>
+      <image src='../../img/bird-voice@2x.png'></image>
+    </view>
+  </view>
+  <view class='content'>{{pinyin}}</view>
+  <view class='content' style='font-style:italic'>{{name_latin}}</view>
+  <view class='box-bg'></view>
+  <view class='content' bindtap='audio'>
+    <view class='title-name lt' >叫声</view>
+    <view class='content-text rt'>{{song_num}}种></view>
+  </view>
+  <view class='content' bindtap='video'>
+    <view class='title-name lt'>视频</view>
+    <view class='content-text rt'>{{video_num}}条></view>
+  </view>
+  <view class='content' bindtap="{{obs_times>0? 'observe' : ''}}">
+    <view class='title-name lt'>观察记录</view>
+    <view class='content-text rt'>{{obs_times}}条></view>
+  </view>
+  <!--地域分布没写跳转  -->
+  <view class='content' bindtap='diyufenbu'>
+    <view class='title-name lt'>地域分布</view>
+    <view class='content-text rt'>></view>
+  </view>
+  <view class='box-bg'></view>
+  <view class='pic'>
+    <image src='../../img/pic1.png'></image>
+  </view>
+  <view class='pic2'>
+    <image src='../../img/pic2.png' class='picimg'></image>
+    <view class='pictxt'>物种分类：</view>
+  </view>
+  <view class='txt'>{{bird_class}}</view>
+  <view class='pic2'>
+    <image src='../../img/pic2.png' class='picimg'></image>
+    <view class='pictxt'>别名：</view>
+  </view>
+  <view class='txt'>{{alias}}</view>
+  <view class='pic2'>
+    <image src='../../img/pic2.png' class='picimg'></image>
+    <view class='pictxt'>保护等级：</view>
+  </view>
+  <view class='contents'>
+    <view class='pic2txt lt'>世界自然保护联盟IUCN</view>
+    <view class='pic3txt rt'>{{protect_iucn}}</view>
+    <!-- <view class='quan rt'>
+      <image src='../../img/quan.png'></image>
+    </view> -->
+    <view class='pic2txt lt'>华盛顿公约CITES</view>
+    <view class='pic3txt rt'>{{protect_cites}}</view>
+    <view class='pic2txt lt'>中国法律保护等级</view>
+    <view class='pic3txt rt'>{{protect_china}}</view>
+  </view>
+  <view class='pic2'>
+    <image src='../../img/pic2.png' class='picimg'></image>
+    <view class='pictxt'>特征：</view>
+  </view>
+  <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>描述</view>
+  </view>
+  <view class='des'>
+    {{describe}}
+  </view>
+  <view class='pic4'>
+    <image src='{{hand_drawing_img}}'></image>
+  </view>
+   <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>颜色</view>
+  </view>
+  <view class='des'>
+    {{color}}
+  </view>
+   <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>叫声</view>
+  </view>
+  <view class='des'>
+    {{song_describe}}
+  </view>
+   <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>习性</view>
+  </view>
+  <view class='des'>
+    {{habit}}
+  </view>
+  <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>生物学特征</view>
+  </view>
+  <view class='des'>
+    {{bi_property}}
+  </view>
+   <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>种群变化趋势</view>
+  </view>
+  <view class='des'>
+    {{po_ch_property}}
+  </view>
+  <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>分布范围</view>
+  </view>
+  <view class='des'>
+   {{dis_range}}
+  </view>
+  <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>分布状况</view>
+  </view>
+  <view class='des'>
+    {{dis_status}}
+  </view>
+  <view class='pic2'>
+     <view class='line'></view>
+    <view class='linetxt'>中国分布状况</view>
+  </view>
+  <view class='des'>
+   {{dis_status_china}}
+  </view>
+</view>

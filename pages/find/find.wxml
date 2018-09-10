@@ -1,0 +1,109 @@
+<!--pages/find/find.wxml-->
+<!--index.wxml-->
+<import src="../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar,isok:isok}}" />
+<view class='main'>
+  <!--搜索开始  -->
+  <view class='search' bindtap='search_qj'>
+    <view class='input'>
+      <input placeholder='在此输入文章名/作者名' placeholder-class='inputClass' disabled='disabled'/>
+    </view>
+    <view class='searchImg search_img'>
+      <image src='../../img/search_hui.png'></image>
+    </view>
+  </view>
+  <!--搜索结束  -->
+  <!--轮播开始  -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#7f7f7f" indicator-active-color="#ffffff">
+    <block wx:for="{{banner}}" wx:key="{{item}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item.img}}" class="slide-image" data-tid="{{item.tid<1? item.aid : item.tid}}" data-article_status='{{item.view_status}}' data-aid='{{item.aid}}' data-mid='{{item.mid}}' bindtap='detail'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--轮播结束  -->
+  <!--导航栏开始  -->
+  <view class='main-dh'>
+    <view class='main-con'  bindtap='nearby'>
+      <view class='main-img'>
+        <image src='../../img/nearby@2x.png'></image>
+      </view>
+      <view class='txt'>附近</view>
+    </view>
+    <view class='main-con' bindtap='information'>
+      <view class='main-img'>
+        <image src='../../img/community@2x.png'></image>
+      </view>
+      <view class='txt'>动态</view>
+    </view>
+    <view class='main-con' bindtap='information1'>
+      <view class='main-img'>
+        <image src='../../img/work@2x.png'></image>
+      </view>
+      <view class='txt'>作品</view>
+    </view>
+    <view class='main-con' bindtap='billing'>
+      <view class='main-img'>
+        <image src='../../img/rankings@2x.png'></image>
+      </view>
+      <view class='txt'>排行</view>
+    </view>
+    <!-- <view class='main-con' bindtap='watch'>
+      <view class='main-img'>
+        <image src='../../img/competition.png'></image>
+      </view>
+      <view class='txt'>活动</view>
+    </view> -->
+  </view>
+  <!--导航栏结束  -->
+  <!--内容页开始  -->
+  <view class='content' wx:for="{{article_list}}" wx:key="{{item}}" data-tid='{{item.tid}}' data-article_status='{{item.article_status}}'>
+    <view class='content-head'>
+      <view class='head'>
+        <view class='head-img'>
+          <image src='{{item.head}}' bindtap='other' data-authorid='{{item.authorid}}'></image>
+        </view>
+        <view class='con-name'>
+          <view class='name'>{{item.author}}</view>
+          <view class='date'>{{item.dateline}}</view>
+        </view>
+      </view>
+      <view class='gz rt' wx:if="{{item.is_follow==0}}" bindtap='guanzhu' data-authorid='{{item.authorid}}' data-index='{{index}}'>关注</view>
+      <view class='gz rt' wx:if="{{item.is_follow==1}}" bindtap='quxiaoguanzhu' data-authorid='{{item.authorid}}' data-index='{{index}}'>已关注</view>
+      
+    </view>
+    <view class='con-img' bindtap='detail' data-article_status='{{item.article_status}}' data-tid='{{item.tid}}' data-index='{{index}}' data-url='{{item.article_status=="300"?"item.url":""}}'>
+      <image src='{{item.imgUrl}}'></image>
+    </view>
+    <view class='con-title' bindtap='detail' data-article_status='{{item.article_status}}' data-tid='{{item.tid}}' data-index='{{index}}' data-url='{{item.article_status=="300"?"item.url":""}}'>{{item.subject}}</view>
+    <view class='con-con' bindtap='detail' data-article_status='{{item.article_status}}' data-tid='{{item.tid}}' data-index='{{index}}' data-url='{{item.article_status=="300"?"item.url":""}}'>{{item.summary}}</view>
+    <view class='con-line'></view>
+    <view class='bottom clear'>
+      <view class='icon lt' bindtap='zhuanfa' data-tid='{{item.tid}}' data-article_status='{{item.article_status}}'>
+        <image src='../../img/operat_icon_forward@2x.png' class='operat lt'></image>
+        <text>转发</text>
+      </view>
+      <view class='icon lt' bindtap='collectArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'>
+        <image src='../../img/operat_big_icon_collect@2x.png' class='operat lt' wx:if="{{item.isCollection==0}}"></image>
+        <image src='../../img/operat_big_icon_collected@2x.png' class='operat lt' wx:if="{{item.isCollection>0}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class='icon lt' bindtap='comment' data-article_status='{{item.article_status}}' data-tid='{{item.tid}}' data-index='{{index}}'>
+        <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+        <text wx:if="{{item.commentNum==0}}">评论</text>
+        <text wx:if="{{item.commentNum>0}}">{{item.commentNum}}</text>
+      </view>
+      <view class='icon lt' bindtap='upArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{item.isUp==0}}"></image>
+        <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{item.isUp>0}}"></image>
+        <text wx:if="{{item.upNum==0}}">点赞</text>
+        <text wx:if="{{item.upNum>0}}">{{item.upNum}}</text>
+      </view>
+    </view>
+  </view>
+  <!--内容页结束  -->
+</view>
+<view class='zhuanfabox {{arrowtop}}' wx:if="{{zhuanfapage == 3}}" bindtap='yincang'>
+  <button class='zhuanfa1' hover-class='none' bindtap='creathaibao'></button>
+  <button class='zhuanfa2' open-type='share' hover-class='none'></button>
+</view>

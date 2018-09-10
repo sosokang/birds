@@ -1,0 +1,8 @@
+<!--pages/vedio/vedio.wxml-->
+<view class='main-none' wx:for="{{video}}" wx:key="{{item}}">
+  <video id="myVideo" class='conImg' src="{{item.video_url}}" poster='{{item.video_imgUrl}}'></video>
+  <!-- <view class='start' bindtap="bindButtonTap">
+    <image src=''></image>
+  </view> -->
+</view>
+

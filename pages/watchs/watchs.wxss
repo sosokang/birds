@@ -1,0 +1,430 @@
+/* pages/watchs/watchs.wxss */
+
+page {
+  background: #ececec;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  background: #fff;
+  height: 100%;
+}
+.main-bg {
+  width: 100%;
+  height: 500rpx;
+  position: relative;
+}
+
+.time{
+  position: absolute;
+  bottom:30rpx;
+  right: 30rpx;
+  padding: 16rpx 20rpx; 
+  border-radius: 48rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
+}
+
+.head{
+  display: flex;
+  margin: 0 30rpx;
+  padding: 30rpx 0 20rpx;
+}
+.headImg {
+  width: 70rpx;
+  height: 70rpx; 
+}
+
+.headTxt {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 20rpx;
+  padding-top: 10rpx; 
+
+}
+.jibie1 {
+  width: 54rpx;
+  height: 26rpx;
+  background: #7faf41;
+  text-align: center;
+  line-height: 26rpx;
+  font-size: 18rpx;
+  color: #fff;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  border-radius: 4rpx;
+}
+.jibie {
+  width: 76rpx;
+  height: 28rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx; 
+}
+
+.right {
+  font-size: 28rpx;
+  color: #7faf41;
+  padding-left: 300rpx;
+  padding-top: 14rpx; 
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+  margin: 30rpx;
+  line-height: 1.7em;
+  font-weight: 900;
+
+} 
+
+.bottom{
+  font-size: 24rpx;
+  color: #7f7f7f;
+  margin: 0 30rpx;
+}
+.price text:first-child{
+  color: #fe5c42;
+}
+.price text:nth-child(2){
+   color: #fe5c42;
+   font-size: 30rpx;
+   font-weight: bold;
+}
+
+.topic{
+  width:100%; 
+  margin: 40rpx auto;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.topic-list{
+ float: left; 
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30rpx 65rpx;
+}
+.right-none{
+  border-right: none;
+}
+
+.topic-list text{
+  font-size: 30rpx;
+  color: #999;
+}
+.content{
+  width:90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contentTitle{
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+ .oneDay{
+  display:flex;
+  margin: 60rpx 0;  
+} 
+
+.dayBorder{
+  border: 1px solid #f7b03d;
+  padding: 10rpx 18rpx;
+  border-radius: 48rpx;
+  display: flex;
+}
+.dayImg{
+  width:28rpx;
+  height: 25rpx;
+}
+.dayBorder text{
+  font-size: 26rpx;
+  color: #f7b03d;
+  margin-left: 10rpx;
+  line-height: 0.7em;
+} 
+.dayTxt{
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+ .des{
+   font-size: 26rpx; 
+  color: #333;
+  line-height: 50rpx;
+}
+
+.desImg{
+  width:690rpx;
+  height: 460rpx;
+  margin-top: 28rpx;
+  padding-bottom: 50rpx;
+}
+
+.contentOne{
+  width: 100%;
+  height: 20rpx;
+  background: #ececec;
+  margin-bottom: 36rpx;
+}
+.desLeft{
+  font-size: 30rpx;
+  line-height: 1.7em;
+  padding-bottom: 50rpx;
+}
+.desLeft view text:first-child{
+  font-weight: bold;
+}
+
+.dateH{
+  margin: 60rpx 0 0;
+}
+.chuxing{
+  margin-top: 60rpx;
+}
+
+.titleA::before{
+  content: "";
+  width: 1px;
+  height: 70%;
+  background: #ccc;
+  position: absolute;
+  top:68rpx;
+  left: 15rpx;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.titleImg{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 8rpx;
+  position: relative;
+  z-index: 1;
+  margin-top: 20rpx;
+}
+
+.titleB{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.1em;
+  margin: 20rpx 0 0 24rpx;
+}
+.titleContent{
+  font-size: 24rpx;
+  color: #999;
+  background: #fffdf4;
+  margin-left: 36rpx;
+  padding:30rpx;
+  margin-top: 20rpx;
+}
+.heads{
+  display: inline;
+}
+.headImgs{
+  width: 142rpx;
+  height: 142rpx;
+  border-radius: 50%;
+  position: relative;
+  padding: 22rpx 0 22rpx 30rpx;
+}
+.sex{
+  width:33rpx;
+  height: 33rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 10rpx;
+}
+.headLt{
+   overflow: hidden; 
+  padding-top: 36rpx;
+  padding-left: 6rpx; 
+  box-sizing: border-box; 
+}
+.headTxts{
+  font-size: 32rpx;
+}
+.jibie1s{
+  padding: 5rpx 10rpx; 
+  background: #7faf41;
+   text-align: center; 
+  font-size: 18rpx;
+  color: #fff;
+  border-radius: 4rpx;
+  margin-top: 10rpx;
+  margin-left: 8rpx;
+}
+.jianjie{
+  margin-top: 20rpx;  
+  margin-left: 6rpx;
+  font-size: 24rpx;
+}
+.rights{
+  font-size: 25rpx;
+  color: #ccc;
+  padding-right: 30rpx;
+}
+
+.lingdui{
+  width: 96rpx;
+  height: 29rpx;
+  padding: 10rpx 0 0 10rpx; 
+}
+
+.scrollContent image{
+  width: 505rpx;
+  height: 316rpx;
+  padding:40rpx 0 20rpx 0;
+}
+.scrollTitle{
+  padding-left: 18rpx;
+}
+.titleTop{
+  font-size: 31rpx;
+}
+
+.titleTxt{
+font-size: 21rpx;
+color: #ccc;
+margin-top: 22rpx;
+padding-bottom: 40rpx;
+}
+.contentZ{
+  width: 100%;
+  background: #fff;
+  padding:30rpx;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+}
+.zanImg{
+  width:64rpx;
+  height: 64rpx;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.zanImg::before{
+  content: '.  .  .';
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 20rpx;
+  color: #666;
+  font-weight: bold;
+  position: absolute;
+  top:0rpx;
+  left: 32rpx;
+  width:64rpx;
+  height: 64rpx;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #ececec;
+}
+.zanTxt{
+  font-size: 24rpx;
+  color: #aeaeae;
+  line-height: 1.7rem;
+}
+.num{
+  padding: 30rpx 22rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #aeaeae;
+  background: #fff;
+}
+.contentH{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.headContent{
+  font-size: 24rpx;
+  color: #333;
+  margin-left: 66rpx;
+}
+.headH {
+  width: 90%;
+  margin: 28rpx auto;
+  padding: 0 0 32rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ececec;
+}
+.sha{
+  width: 373rpx;
+  height: 73rpx;
+  margin: 48rpx auto 215rpx;
+}
+
+.huifu{
+  background: #ececec;
+  padding: 20rpx 25rpx;
+  margin-top: 30rpx;
+   border-radius: 5rpx;
+}
+
+.headImg {
+  width: 73rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 10rpx;
+}
+
+.dates {
+  font-size: 18rpx;
+  color: #afafaf;
+  margin-left: -84rpx;
+  padding-top: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.foot{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  background: #fff;
+  padding-left: 50rpx;
+}
+
+.foot .icon {
+  margin-right: 75rpx;
+}
+
+.operat {
+  width: 45rpx;
+  height: 44rpx;
+  margin: 22rpx 13rpx 33rpx 0;
+}
+
+.foot text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 3.8em;
+}
+.baoming{
+  background: #f7b03d;
+  width:337rpx;
+  text-align: center;
+  line-height:98rpx ;
+  margin-left: 32rpx;
+  color: #fff;
+  font-size: 36rpx;
+}

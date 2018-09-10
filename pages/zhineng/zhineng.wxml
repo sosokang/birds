@@ -1,0 +1,32 @@
+<!--pages/zhineng/zhineng.wxml-->
+<view class='top_img'><image src='{{top_img}}'></image></view>
+<view class='border'></view>
+<view class='niao_list_box' wx:if="{{niao_list}}">
+  <view class='shibie_ans'>识别结果</view>
+  <view wx:for="{{niao_list}}" wx:key="{{item}}" style='overflow:hidden;margin-bottom:4rpx;background:#fff;' bindtap='xuan_niao' data-name='{{item.name}}' data-name_la='{{item.name_la}}' data-csp_code='{{item.csp_code}}' class='niao_list'>
+    <image src='{{item.imgUrl}}' class='bird_img'></image>
+    <view class='niao_name'>
+      <view style='padding-top:48rpx;padding-bottom:12rpx;'>{{item.name}}</view>
+      <view class='name_la'>{{item.name_la}}</view>
+    </view>
+    <view class='niao_kexin'>
+      <view class='xiangsi'>相似度</view>
+      <view class='xiangsizhi'>{{item.score}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{wenzi=='1'}}" class='niaozhong'>
+  <view >这里包含鸟类数据达<text>1400</text>多种</view>
+  <view>快点来认识它们吧！</view>
+</view>
+<view wx:if="{{wenzi=='2'}}" class='niaozhong'>
+  <view >正在识别请稍后...</view>
+</view>
+<view wx:if="{{wenzi=='3'}}" class='niaozhong'>
+  <view >抱歉！未检测到鸟类</view>
+  <view>请上传包含鸟类的清晰图片</view>
+</view>
+
+<view class='btn_shangchuan' bindtap='uploadimg'>
+  <text>上传图片</text>
+</view>

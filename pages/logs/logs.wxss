@@ -1,0 +1,90 @@
+/* .log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+} */
+.main{
+  margin: auto auto;
+}
+.logbg{
+  width: 750rpx;
+  height:100vh;
+}
+.logsContent{
+  width:690rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top: -67.1%;
+  margin-left: -46.1%;
+}
+.close1{
+  width:40rpx;
+  height:40rpx;
+  margin: 30rpx;
+}
+.logo{
+  width:366rpx;
+  height: 127rpx;
+  margin-top: 72rpx;
+  margin-left: 30rpx;
+  margin-bottom: 90rpx;
+}
+.logsInput{
+  width:636rpx;
+  height: 85rpx;
+    border-bottom: 1px solid #ececec; 
+    margin:0 30rpx 40rpx; 
+   display: inline-block;   
+}
+.logsInput .icon{
+  width: 28rpx;
+  height:39rpx;
+  margin: 25rpx; 
+}
+.logsInput .close{
+  width:32rpx;
+  height:32rpx;
+  margin-top: -35rpx;
+}
+.logsInput input{
+ margin-left: 65rpx;
+ margin-top: 25rpx;  
+ font-size: 29rpx;
+}
+.paww{
+  /* float: right; */
+  font-size: 24rpx;
+  color:#999999;
+   margin: 37rpx 30rpx 0; 
+}
+.paww text{
+   padding: 5rpx; 
+}
+.reg{
+  color: #7faf41;padding: 0;line-height: 1;background: none;border: none;
+}
+.back{padding: 0;line-height: 1;background: none;border: none;}
+button::after{ border: none; }
+.btn{
+  width: 87%;
+  height:80rpx;
+  border-radius: 8rpx;
+  background:#7faf41;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  margin: 86rpx auto 55rpx; 
+}
+.txt{
+  font-size: 24rpx;
+  text-align: center;
+  color: #a2a2a2;
+  margin-bottom: 75rpx;
+}

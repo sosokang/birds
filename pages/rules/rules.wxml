@@ -1,0 +1,56 @@
+<!--pages/rules/rules.wxml-->
+<import src="../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar,isok:isok}}" />
+<view class='main clear'>
+  <view class='mainbg'>
+    <image src='../../img/rulesbg.jpg'></image>
+  </view>
+  <view class='bgtxt'>让我们一起来认识鸟儿吧！</view>
+  <view class='bginput' bindtap='sousuo_box1'>
+    <input placeholder='输入鸟名简拼/中文/英文' placeholder-class='inputClass' bindconfirm="onconfirm" bindblur="onBindBlur" class='sousuo'/>
+    <view class='searchImg search_img' bindtap='search_bird'>
+      <image src='../../img/black_search.png'></image>
+    </view>
+  </view>
+  <view class='rule-con' bindtap='tupian'>
+    <view class='rule-img lt'>
+      <image src='../../img/pic_find.png'></image>
+    </view>
+    <view class='rule-txt lt'>
+      <text class='rule-txt1'>图片查鸟</text>
+      <text class='rule-txt2'>上传图片   智能查鸟</text>
+    </view>
+    <image src='../../img/arrow_right_grey.png' class='rule_arrow'></image>
+  </view>
+  <view class='rule-con' bindtap='ruleCon'>
+    <view class='rule-img lt'>
+      <image src='../../img/body_find.png'></image>
+    </view>
+    <view class='rule-txt lt'>
+      <text class='rule-txt1'>体型查鸟</text>
+      <text class='rule-txt2'>根据体型   快速查找</text>
+    </view>
+    <image src='../../img/arrow_right_grey.png' class='rule_arrow'></image>
+  </view>
+  <view class='rule-con' bindtap='ruleCon1'>
+    <view class='rule-img lt'>
+      <image src='../../img/class_find.png'></image>
+    </view>
+    <view class='rule-txt lt'>
+      <text class='rule-txt1'>分类查鸟</text>
+      <text class='rule-txt2'>目科属种   分类查找</text>
+    </view>
+    <image src='../../img/arrow_right_grey.png' class='rule_arrow'></image>
+  </view>
+  <view class='rule-line'>
+    <image src='../../img/line.png'></image>
+  </view>
+  <view class='content lt' bindtap='detail' wx:for="{{niao_list}}" wx:key="{{item}}" data-csp_code='{{item.csp_code}}'>
+    <view class='content-img'>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='title'>{{item.name}}</view>
+    <view class='author'>作者：{{item.author}}</view>
+  </view>
+  
+</view>

@@ -1,0 +1,105 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail' wx:if="{{page == 1}}"> 
+  <view class='detailHeader' style='display:{{titlezt}}'>
+    <view class='close' bindtap='goback'>
+      <image src='../../img/close1.png'></image>
+    </view>
+    <view class='headerImg'>
+      <image src='{{head}}'bababb></image>
+    </view>
+    <view class='headerTitle'>
+      {{author}}
+    </view>
+  </view>
+  <view wx:if="{{pagenum==1}}">
+    <swiper class="swiper content" autoplay="true" interval="5000" duration="1000" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" bindtap='titlezt' indicator-color="#7f7f7f" indicator-active-color="#ffffff" bindchange="swiperChange" current="{{current}}">    
+        <view wx:for-index="index">    
+          <swiper-item wx:for="{{movies}}" wx:key="*this">    
+            <image src="{{item.imgUrl}}" class="slide-image" mode="aspectFill" style='width:100%;margin-top:{{(1000-750/item.imgWidth*item.imgHeight)/2}}rpx;height:{{750/item.imgWidth*item.imgHeight}}rpx;' aid="{{item.aid}}"></image>  
+            <view class='parameter' wx:if="{{photo == 1}}" bindtap='photocshide' bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" >
+          <view class='parameterContent'>
+            <view class='parameterTitle'>
+              <view class='titleLeft'>
+                {{birdName}}
+              </view>
+              <!-- <view class='date'>
+                {{ctime}}
+              </view> -->
+            </view>
+            <!-- <view class='parameterContair'>
+              {{description}}
+            </view> -->
+          </view>
+          <view class='line'></view>
+          <view class='photo'>
+            <view class='photoTitle'>{{item.imgTag}}</view>
+            <view class='photoTitle'>照片参数：</view>
+            <view class='photoClass'>{{item.imgExifLen}}</view>
+            <view class='photoClass'>{{item.imgExifModel}}</view>
+            <view class='photoClass'>{{item.imgExifParameter}}</view>
+          </view>
+        </view>
+          </swiper-item>  
+          
+        </view>    
+      </swiper>    
+    </view>  
+     <view class='bottom1' style='display:{{titlezt}}'>
+    <view class='comments'>
+       <view class='titleright'>
+              {{birdName}}
+            </view> 
+        <view class="imageCount">{{current+1}}/{{movies.length||'1'}}</view>
+      </view>
+  </view>
+  <view>
+  <view wx:if="{{pagenum==2}}">
+    <image src="{{imgUrl}}" class="slide-image" mode="aspectFill" style='width:100%;margin-top:{{(1000-750/imgWidth*imgHeight)/2}}rpx;height:{{750/imgWidth*imgHeight}}rpx;' aid="{{aid}}" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" bindtap='titlezt'></image>
+    <view class='parameter' wx:if="{{photo == 1}}" bindtap='photocshide' bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" >
+          <view class='parameterContent'>
+            <view class='parameterTitle'>
+              <view class='titleLeft'>
+                {{birdName}}
+              </view>
+              <!-- <view class='date'>
+                {{ctime}}
+              </view> -->
+            </view>
+            <!-- <view class='parameterContair'>
+              {{description}}
+            </view> -->
+          </view>
+          <view class='line'></view>
+          <view class='photo'>
+            <view class='photoTitle'>{{birdName}}</view>
+            <view class='photoTitle'>照片参数：</view>
+            <view class='photoClass'>{{imgExifLen}}</view>
+            <view class='photoClass'>{{imgExifModel}}</view>
+            <view class='photoClass'>{{imgExifParameter}}</view>
+          </view>
+        </view>
+  </view>
+ 
+  </view>
+  
+  <view class='bottom' style='display:{{titlezt}}'>
+    <view class='comments'>
+       <view class='titleright' bindtap='photoinfo'>
+              <image src='../../img/i.png' class='i'></image>
+            </view> 
+       <!-- <button class='zhuanfa'  hover-class='none' open-type='share' ></button> -->
+       <!-- <view class='icon lt' bindtap='upArticle' data-tid='{{tid}}'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{isUp==0}}"></image>
+        <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{isUp>0}}"></image>
+        <text wx:if="{{upnum==0}}">点赞</text>
+        <text wx:if="{{upnum>0}}">{{upnum}}</text>
+      </view> -->
+       <button class='zhuanfa'  hover-class='none' bindtap='zhuanfa'></button>
+      </view>
+  </view>
+   
+</view>
+<view class='zhuanfabox {{arrowtop}}' wx:if="{{zhuanfapage == 3}}" bindtap='yincang'>
+  <button class='zhuanfa1' hover-class='none' bindtap='creathaibao'></button>
+  <button class='zhuanfa2' open-type='share' hover-class='none'></button>
+</view>

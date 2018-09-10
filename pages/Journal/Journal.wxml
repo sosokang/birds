@@ -1,0 +1,126 @@
+<!--pages/Journal/Journal.wxml-->
+<view class='main' wx:if="{{pinglun==0}}">
+  <view class='main-bg'>
+    <image src='{{coverImgUrl}}' wx:if="{{coverImgUrl!=''}}" class='main_bgimg'></image>
+    <view class='viewNum'>
+      <image src='../../img/eye.png' class='eye'></image>
+      <text>{{viewNum}}</text>
+    </view>
+  </view>
+  <view class='content clear'>
+    <view class='title'>{{title}}</view>
+    <view class='head' bindtap='other'>
+      <view class='headImg lt' data-authorid=' {{authorid}}'>
+        <image src='{{authorHead}}'></image>
+      </view>
+      <view class='name lt'>{{author}}
+      <view class='date'>{{publishTime}}</view>
+      </view>
+      
+      <view class='right rt' wx:if="{{isFollow==0}}" bindtap='guanzhu'>关注</view>
+      <view class='right1 rt' wx:if="{{isFollow==1}}" bindtap='quxiaoguanzhu'>已关注</view>
+    </view>
+  </view>
+  <view class='contentTwo'>
+    <view class='two' wx:if="{{birdInfo[0].num!=0}}">
+      <image src='../../img/niao.png' class='niao'></image>
+      <view class='text' wx:for="{{birdInfo}}" wx:key="{{item}}">
+        <text data-csp_code='{{item.csp_code}}'>{{item.genus}}</text> <text style='font-size:20rpx;color:#666;'>{{item.num}}</text>
+      </view>
+    </view>
+    <view class='two' wx:if="{{birdInfo[0].num!=0}}">
+      <image src='../../img/adress1.png' class='adress'></image>
+      <view class='text'>{{locale}}</view>
+    </view>
+    <view class='two' wx:if="{{birdInfo[0].num!=0}}">
+      <image src='../../img/date_record@2x.png' class='date_recor'></image>
+      <view class='text'>{{observeTime}}</view>
+    </view>
+    <view class='two' wx:if="{{birdInfo[0].num!=0}}">
+      <image src='../../img/ecology_record.png' class='ecology_record'></image>
+      <view class='text'>{{environment}}</view>
+    </view>
+  </view>
+  <view class='contentThree'>
+    <view class='bottom clear'>
+     <view class='icon lt' bindtap='zhuanfa'>
+        <image src='../../img/operat_icon_forward@2x.png' class='operat lt'></image>
+        <text>转发</text>
+      </view>
+      <view class='icon lt' bindtap='collectArticle'>
+        <image src='../../img/operat_big_icon_collect@2x.png' class='operat lt' wx:if="{{isCollection==0}}" ></image>
+        <image src='../../img/operat_big_icon_collected@2x.png' class='operat lt' wx:if="{{isCollection>0}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class='icon lt' bindtap='comment'>
+        <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+        <text wx:if="{{count==0}}">评论</text>
+        <text wx:if="{{count>0}}">{{count}}</text>
+      </view>
+      <view class='icon lt' bindtap='upArticle' data-tid='{{tid}}'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{isUp==0}}"></image>
+        <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{isUp>0}}"></image>
+        <text wx:if="{{upnum==0}}">点赞</text>
+        <text wx:if="{{upnum>0}}">{{upnum}}</text>
+      </view>
+      <view class='dateOne rt' wx:if="{{bianji==1}}" bindtap='rizhibianji'>编辑</view>
+      <view class='dateOne rt' wx:if="{{fanhui==1}}" bindtap='goback'>返回首页</view>
+    </view>
+  </view>
+  <view class='contentS'>
+    <view class='contentBg clear' wx:for="{{postBody}}" wx:key="{{item}}">
+      <view class='titleS'>
+        <text class='titleOne' wx:if="{{item.isImg==0}}">
+          {{item.message}}
+        </text>
+      </view>
+      <view wx:if="{{item.isImg==1}}" class='titleImg'>
+        <view>
+          <image src='{{item.imgUrl}}' style='width:690rpx;height:{{item.imgHeight/item.imgWidth*690}}rpx;'></image>
+        </view>
+        <view class='titleBr rt' wx:if="{{item.imgTag!=''}}">
+          {{item.imgTag}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='contentZ clear'>
+    <view class='zanImg lt'>
+      <image wx:for="{{uplist}}" wx:key="{{item}}" src='{{item.head}}' style=''></image>
+    </view>
+    <view class='zanTxt rt'>已有{{upnum}}人赞过</view>
+  </view>
+   <view class='contentH '>
+     <view class='num'>
+      已有{{count}}人评论过
+    </view>
+    <view class='headH clear' wx:for="{{commentList}}" wx:key="{{item}}">
+      <view class='headImg lt'>
+        <image src='{{item.head}}'></image>
+      </view>
+      <view class='name lt'>{{item.userName}}</view>
+      <view class='date1 lt'>{{item.dateline}}</view>
+      <!-- <view class='rightImg rt' bindtap='like'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat' wx:if="{{!like}}"></image>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat'wx:else></image>
+      </view> -->
+      <view class='headContent'>
+        {{item.content}}
+      </view>
+    </view>
+    <view class='sha'>
+      <image src='../../img/sha.png'></image>
+    </view>
+  </view>
+</view>
+<view wx:if="{{pinglun==1}}">
+  <view class='dibuWrite'>
+       <input placeholder='写评论...' auto-focus='{{true}}' placeholder-style='color:#ffffff;padding-left:10rpx;font-size:30rpx;' bindinput="pinglun3" value='{{kong}}'/> 
+      <!-- <textarea placeholder='写评论...' auto-focus='true' style='color:#ffffff;padding:20rpx;font-size:30rpx;' bindblur="pinglun3" value='{{kong}}' wx:if="{{auto_focus != false}}"></textarea> -->
+      <text class="fabiao" bindtap='fabiao1'>发表</text>
+    </view>
+</view>
+<view class='zhuanfabox {{arrowtop}}' wx:if="{{zhuanfapage == 3}}" bindtap='yincang'>
+  <button class='zhuanfa1' hover-class='none' bindtap='creathaibao'></button>
+  <button class='zhuanfa2' open-type='share' hover-class='none'></button>
+</view>

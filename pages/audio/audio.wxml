@@ -1,0 +1,11 @@
+<!--pages/audio/audio.wxml-->
+<view class='main'>
+  <view class='content'>
+    <view class='play' wx:for="{{song}}" wx:key="{{item}}">
+      <!-- <image wx:if="{{play==1}}" src='../../img/play.png' bindtap='playtap'></image>
+      <image wx:else src='../../img/paused.png' bindtap='stoptap'></image> -->
+      <audio poster="{{poster}}" name="{{name}}" author="{{item.author}}" src="{{item.song_url}}" controls id="{{item.vid}}"></audio>
+    </view>
+    <!-- <view class='calls'>{{item.author}}</view> -->
+ </view>
+</view>

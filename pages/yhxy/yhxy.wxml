@@ -1,0 +1,2 @@
+<!--pages/yhxy/yhxy.wxml-->
+<web-view src="https://xcxu.birdfans.com/app/protocol.php" class='webview'></web-view>

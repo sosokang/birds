@@ -1,0 +1,68 @@
+/* pages/mu/mu.wxss */
+page {
+  background: #ececec;  
+  /* padding-bottom: 100rpx; */
+}
+.main-bg{
+  width: 92%;
+  height: 65rpx;
+  background: #fff;
+  margin: 18rpx auto;
+  font-size: 26rpx;border-radius: 6rpx;
+}
+.search {
+  width: 92%;
+  height: 65rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  margin: 18rpx auto;
+  font-size: 28rpx;
+  
+}
+.search_img {
+  float: left;
+  width: 32rpx;
+  height: 32rpx;
+  margin:16rpx;
+}
+
+.inputClass {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #a2a2a2;
+}
+.input{
+  height: 65rpx;line-height: 65rpx;
+}
+.input input{
+  height: 65rpx;line-height: 65rpx;
+}
+.content{
+  width:100%;
+  background: #fff;
+}
+.content-bg{
+  width:92%;
+  margin: 0 auto;
+  padding: 16rpx 0;
+  border-bottom: 1px solid #ececec;
+}
+.con-img{
+  width: 64rpx;
+  height:64rpx;background-repeat: no-repeat;background-size: cover;background-position: center;text-align: center;line-height: 64rpx;
+  color: #FFF;
+}
+.con-txt{
+  font-size: 26rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 64rpx;
+  padding-left: 18rpx;
+}
+.con-jian{
+  width: 14rpx;
+  height: 20rpx;
+  padding: 16rpx 0;
+}
+.niao_name{font-size: 24rpx;margin-left: 20rpx;float:left;}
+.name_la{font-size: 20rpx;font-style: italic;}

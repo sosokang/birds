@@ -1,0 +1,23 @@
+/* pages/vedio/vedio.wxss */
+page {
+  background: #ececec;
+}
+
+.main-none {
+  background: #fff;
+  padding: 30rpx;
+  position: relative;
+  margin-top: 20rpx;
+}
+.conImg{
+  width: 697rpx;
+  height: 410rpx;
+}
+.start{
+  width: 110rpx;
+  height: 109rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 185rpx 320rpx;
+}

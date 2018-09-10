@@ -1,0 +1,16 @@
+/* pages/zhineng/zhineng.wxss */
+.top_img{width: 750rpx;height: 500rpx;}
+.top_img image{width: 100%;height: 100%;}
+.border{width: 750rpx;height: 20rpx;background: #ececec;}
+.btn_shangchuan{position: fixed;bottom:58rpx;left:162rpx;width: 426rpx;height:88rpx;background: #7faf41;border-radius:44rpx;font-size: 36rpx;color:#fff;text-align: center;line-height: 88rpx; }
+.niao_list_box{width:690rpx;padding: 30rpx;padding-bottom: 150rpx;}
+.shibie_ans{font-size: 32rpx;color: #000;padding-bottom: 30rpx;border-bottom: 1rpx solid #ececec;}
+.niao_list{border-bottom: 1rpx solid #ececec;}
+.bird_img{width: 198rpx;height: 130rpx;margin: 20rpx 0;float: left;}
+.niao_name{font-size: 32rpx;margin-left: 20rpx;float:left;color: #000;}
+.name_la{font-size: 32rpx;font-style: italic;color: #7f7f7f;}
+.niao_kexin{float: right;width: 86rpx;text-align: center;}
+.xiangsi{font-size:22rpx;color: #7f7f7f;padding: 58rpx 0 12rpx;}
+.xiangsizhi{font-size:24rpx;color: #7faf41;}
+.niaozhong{font-size: 36rpx;margin: 200rpx auto 0;text-align: center;line-height: 2;color:#7f7f7f;  }
+.niaozhong text{font-size: 40rpx;color:#eb6877;}

@@ -1,0 +1,3 @@
+<view class="textarea-container">
+    <input autoFocus="true" bindconfirm="onconfirm" bindinput="oninput" placeholderStyle="color: #B7BABE" value="{{title}}"></input>
+</view>

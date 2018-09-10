@@ -1,0 +1,41 @@
+<!--pages/back/back.wxml-->
+<view class='backContent'>
+  <view class='back'>
+    <view class='logsInput clear'>
+      <view class='icon lt'>
+        <image src='../../img/phone@2x.png'></image>
+      </view>
+      <input placeholder='请输入手机号' placeholder-style='color:#999999' bindblur="phone"/>
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con4'>
+        <image src='../../img/key@2x.png'></image>
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='请输入验证码' placeholder-class='con-input' bindblur="pcode" />
+      </view>
+      <view class='con-bo'>
+        <view class='bo-line'></view>
+        <view style="color:#7faf41; font-size:30rpx; float:left;margin-top:10rpx;" wx:if="{{sendyzm==1}}">（{{min}}s）后从发</view>
+        <view style="color:#7faf41; font-size:30rpx; float:left;margin-top:10rpx; " wx:if="{{sendyzm==0}}" bindtap='yzm'>获取验证码</view>
+      </view>
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con2'>
+        <image src='../../img/lock@2x.png'></image>     
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='请设置新密码：' placeholder-class='con-input' bindblur="pass" type='password'/>
+      </view>
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con2'>
+        <image src='../../img/lock1.jpg'></image>     
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='确认密码：' placeholder-class='con-input' bindblur="pass1" type='password'/>
+      </view>
+    </view>
+  </view>
+  <view class='reg' bindtap='reg'>确认找回</view>
+</view>

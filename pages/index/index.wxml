@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<import src="../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar,isok:isok}}" />
+<map id="map"  scale="{{scale}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" 
+latitude="{{latitude}}"
+longitude ="{{longitude}}"
+controls="{{controls}}" show-location bindregionchange="mapChange" style="width: 100%; height: {{view.Height}}px;"></map>
+<!-- <cover-view class='search_box'><cover-image src='../../img/adress.png' class='dingwei_png'></cover-image><cover-view class='dingwei_text'>{{current_position}}</cover-view><cover-view class='qingshuru' bindtap='sousuo_box'>| 请输入</cover-view><cover-image src='../../img/search_hui.png' class='search_img'></cover-image></cover-view> -->
+<cover-view class='search_box'>
+  <cover-view class='search_box2' bindtap='sousuo_box'> 
+  <cover-image src='../../img/adress.png' class='adress'></cover-image>
+  <cover-view class='qingshuru'>{{dingwei}}</cover-view>
+  </cover-view>
+  <cover-view class='search_box1' bindtap='sousuo_box1'>
+  <cover-image src='../../img/black_search.png' class='sousuo_img'></cover-image>
+  </cover-view>
+</cover-view>
+
+<cover-view class='gongli'>
+  <cover-view class="{{fanwei == '5000' ?'gongli_text gongli_active':'gongli_text'}}" bindtap="gongli" data-gongli="5000" data-scale="14">5公里</cover-view> 
+  <cover-view class="{{fanwei == '10000' ?'gongli_text gongli_active':'gongli_text'}}" bindtap="gongli" data-gongli="10000" data-scale="13">10公里</cover-view> 
+  <cover-view class="{{fanwei == '20000' ?'gongli_text gongli_active':'gongli_text'}}" bindtap="gongli" data-gongli="20000" data-scale="12">20公里</cover-view>
+  <cover-view class="{{fanwei == '50000' ?'gongli_text gongli_active':'gongli_text'}}" bindtap="gongli" data-gongli="50000" data-scale="10">50公里</cover-view>
+</cover-view>
+<cover-view style='display:{{display}}' class='niao_list_box'>
+  <cover-view class='niao_list'>
+    <cover-view class='niao_top'>
+      <cover-view class='niao_num'>全部鸟种（{{niao_list.length}}）</cover-view>
+      <cover-image src='../../img/close.png' class='close' bindtap='hide'></cover-image>
+    </cover-view>
+    <cover-view class='niao_content'>
+      <cover-view class='niao_box' wx:for="{{niao_list}}" wx:key="{{item}}" style='' bindtap='xuan_niao' data-csp_code='{{item.csp_code}}' data-niao_num='1'>
+        <cover-image src='{{item.imgUrl}}' style='width:150rpx;height:100rpx;float:left;margin:10rpx 0;'></cover-image>
+        <cover-view class='niao_name'>
+          <cover-view style='padding-top:30rpx;padding-bottom:10rpx;'>{{item.name}}</cover-view>
+          <cover-view class='name_la'>{{item.name_la}}</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+    
+  </cover-view>
+</cover-view>
+
+<!-- <cover-view class='niao_xiangqing' bindtap='hide' style='display:none'>
+  <cover-image src='' class='niao_img'></cover-image>
+  <cover-view class='niao_text'>
+    <cover-view class='niao_title'>小云雀</cover-view>
+    <cover-view class='niao_miaoshu'>小云雀(学名：)</cover-view>
+    <cover-view class='niao_miaoshu'>是百灵科云雀属的鸟类</cover-view>
+    <cover-view class='niao_border'></cover-view>
+    <cover-view class='niao_clumn'>百灵科▪云雀属</cover-view>
+  </cover-view>
+</cover-view> -->

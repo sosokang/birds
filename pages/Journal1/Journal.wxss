@@ -1,0 +1,322 @@
+/* pages/Journal/Journal.wxss */
+
+page {
+  background: #ececec;
+  padding-bottom: 100rpx;
+}
+
+.main-bg {
+  width: 100%;
+  height: 500rpx;position: relative;
+}
+
+.main-none {
+  background: #fff;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.title {
+  width: 90%;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  padding-top: 30rpx;
+  margin: 0 auto;
+}
+
+.head {
+  width: 90%;
+  margin: 54rpx auto;
+  padding-bottom: 60rpx;
+}
+
+.headImg {
+  width: 73rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+.headImg image{width: 100%;height:100%;border-radius: 50%;}
+
+.name {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 10rpx;
+}
+
+.date {
+  font-size: 18rpx;
+  color: #afafaf;
+  clear: both;
+}
+.date1 {
+  font-size: 18rpx;
+  color: #afafaf;
+  clear: both;margin: -30rpx 0 0 80rpx;
+}
+.right {
+  width: 100rpx;
+  height: 52rpx;
+  border-radius: 4rpx;
+  text-align: center;
+  background: #7faf41;
+  line-height: 52rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.right1 {
+  width: 100rpx;
+  height: 52rpx;
+  border-radius: 4rpx;
+  text-align: center;
+  background: #ececec;
+  line-height: 52rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.huifu{
+  background: #ececec;
+  padding: 20rpx 25rpx;
+  margin-top: 30rpx;
+  border-radius: 5rpx;
+}
+.contentTwo {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  margin: 20rpx auto;
+}
+.contentTwo .niao {
+  width: 35rpx;
+  height: 27rpx;
+  margin-top: 10rpx;
+}
+
+.two {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  padding: 30rpx 0 30rpx 28rpx;
+  border-bottom: 1px solid #ececec;
+}
+
+.text {
+  font-size: 28rpx;
+  color: #333;
+  margin-top: -2rpx;
+  padding-left: 28rpx;
+}
+
+.text text {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.adress {
+  width: 24rpx;
+  height: 32rpx;
+}
+
+.date_recor {
+  width: 28rpx;
+  height: 27rpx;
+}
+
+.contentThree {
+  width: 100%;
+  /* height: 100%; */
+  background: #fff;
+  margin: 0rpx auto;position: fixed;left: 0;bottom: 0;z-index: 99;
+}
+
+.bottom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom .icon {
+  margin-right: 30rpx;
+}
+
+.operat {
+  width: 45rpx;
+  height: 44rpx;
+  margin: 22rpx 13rpx 33rpx 0;
+}
+
+.bottom text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 3.8em;
+}
+
+.dateOne {
+  font-size: 30rpx;
+  color: #7faf41;
+  margin-right: 10rpx;
+  line-height: 3.2em;
+  font-weight: bold;
+}
+
+.contentS{
+  width: 100%;
+  background: #fff;
+  margin: 20rpx auto;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.contentBg{
+  margin: 0rpx 0;
+}
+.contentS .titleS {
+  width: 90%;
+  line-height: 44rpx;
+  margin: 30rpx auto 18rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.contentS .titleS .titleTwo{
+  padding: 30rpx 0 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 5; /** 显示的行数 **/
+}
+.titleImg {
+  width: 690rpx;
+  /* height: 460rpx; */
+  margin: 0 auto 20rpx;
+}
+.titleBr{
+  display: table;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 0 22rpx;
+  height: 40rpx; 
+  font-size: 22rpx;
+  color: #666;
+  background: #ececec;
+  margin: 22rpx 30rpx 20rpx 0;
+}
+.contentZ{
+  width: 100%;
+  background: #fff;
+  padding:30rpx;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+}
+.zanImg{
+  max-width:404rpx;
+  height: 64rpx;
+  border: 1px solid #fff;
+  overflow: hidden;
+  position: relative;
+}
+.zanImg image{border-radius:50%;float:left;width:64rpx;margin-left:-20rpx;}
+.zanImg image:first-child{margin-left: 0;}
+.zanImg::before{
+  content: '.  .  .';
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 20rpx;
+  color: #666;
+  font-weight: bold;
+  width:64rpx;
+  height: 64rpx;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #ececec;float: right;transform: translateX(-20rpx);
+}
+.zanTxt{
+  font-size: 24rpx;
+  color: #aeaeae;
+  line-height: 1.7rem;
+}
+.num{
+  padding: 30rpx 22rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #aeaeae;
+  background: #fff;
+}
+.contentH{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.headContent{
+  font-size: 24rpx;line-height: 36rpx;
+  color: #333;clear: both;padding-top: 20rpx;
+  margin-left: 76rpx;
+}
+.headH {
+  width: 90%;
+  margin: 28rpx auto;
+  padding: 0 0 32rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ececec;
+}
+.sha{
+  width: 373rpx;
+  height: 73rpx;
+  margin: 48rpx auto;
+}
+.viewNum{position: absolute;right: 30rpx;top:40rpx;font-size: 24rpx;
+  color: #fff;}
+.eye {
+  width: 35rpx;
+  height: 22rpx;display: inline-block;margin-right: 16rpx;
+}
+.dibuWrite{
+  width: 750rpx;
+  /* height:70rpx; */
+  background: #fff;position: relative;
+}
+.dibuWrite input{
+  width: 560rpx;
+  height:70rpx;
+  background: #fff;color: #333;padding-left: 30rpx;font-size: 30rpx;
+}
+.fabiao{position: absolute;right: 30rpx;top:0rpx;font-size: 30rpx;color: #333;z-index: 99;display: block;width: 80rpx;height: 70rpx;text-align: center;cursor: pointer;line-height: 70rpx;}
+.zhuanfabox{height: 425rpx;width: 750rpx;position: fixed;bottom: 0;left:0;background: #fff;opacity: 0;z-index: 99999;}
+.arrowtop{-webkit-animation: fadeInUp 1s ease 0s 1 forwards;}
+@-webkit-keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;transform:none}
+}
+@keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);-ms-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;-ms-transform:none;transform:none}
+}
+.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+button[class="zhuanfa"]{
+  width:47rpx;
+  height: 46rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanfa.png');background-size: cover;float: left;margin-left: 30rpx;
+}
+.imageCount{float: right;margin-right: 30rpx;color: #fff;font-size: 30rpx;}
+button[class="zhuanfa"]::after {
+  border: 0;
+}
+button[class="zhuanfa1"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:100rpx 165rpx 50rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/creathaibao.png');background-size:  100% 100%;
+}
+button[class="zhuanfa1"]::after {
+  border: 0;
+}
+button[class="zhuanfa2"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:0 165rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanhaoyou.png');background-size: 100% 100%;
+}
+button[class="zhuanfa2"]::after {
+  border: 0;
+}

@@ -1,0 +1,29 @@
+<!--pages/watch/watch.wxml-->
+<view class='main'>
+  <view class="main-bg" bindtap='watchs' wx:for="{{travelList}}" wx:key="{{item}}" data-tid='{{item.tid}}'>
+    <view class='head'>
+      <view class='headImg lt'>
+        <image src='{{item.head}}'></image>
+      </view>
+      <view class='headTxt lt'>{{item.leader}}</view>
+      <view class='jibie lt'>
+        <image src='{{item.leaderGroup_img}}'></image>
+      </view>
+      <view class='gz lt' wx:if="{{item.isFollow==0}}">关注</view>
+      <view class='gz lt' wx:if="{{item.isFollow==1}}">已关注</view>
+    </view>
+    <view class='conImg'>
+      <image src='{{item.imgUrl}}'></image>
+    </view>
+    <view class='title'>
+      {{item.subject}}
+    </view>
+    <view class='bottom clear'>
+      <view class='price lt'>价格
+        <text>￥</text>
+        <text>{{item.cost}}</text>
+      </view>
+      <view class='date lt'>出团日期：{{item.dateStart}}—{{item.dateEnd}}</view>
+    </view>
+  </view>
+</view>

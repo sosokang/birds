@@ -1,0 +1,4 @@
+.shengjing{font-size: 22rpx;color: #333;text-align: center;float: left;width: 249rpx;border-right: 1rpx solid #ececec;border-bottom: 1rpx solid #ececec;height: 186rpx;}
+.shengjing image{margin:23rpx auto 10rpx;display: block;width: 118rpx;height: 118rpx;}
+.shengjing:nth-child(3),.shengjing:nth-child(6),.shengjing:nth-child(9){border-right: none;}
+/* .checked{background: #7faf41;color: #fff;} */

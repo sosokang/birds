@@ -1,0 +1,10 @@
+<view class="textarea-container">
+    <input autoFocus="true" bindinput="onconfirm" placeholder='输入鸟名简拼/中文/英文' placeholderStyle="color: #B7BABE" value="{{title}}" confirm-type="search"></input>
+</view>
+<view class='niao_box' wx:for="{{niao_list}}" wx:key="{{item}}" style='overflow:hidden;margin-bottom:4rpx;background:#fff;' bindtap='xuan_niao' data-name='{{item.name}}' data-name_la='{{item.name_la}}' data-csp_code='{{item.csp_code}}' data-niao_num='1' data-index='{{index}}'>
+  <image src='{{item.bird_img}}' style='width:150rpx;height:100rpx;float:left;'></image>
+  <view class='niao_name'>
+    <view style='padding-top:20rpx;'>{{item.name}}</view>
+    <view class='name_la'>{{item.name_la}}</view>
+  </view>
+</view>

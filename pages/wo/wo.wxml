@@ -1,0 +1,16 @@
+<!--pages/wo/wo.wxml-->
+<view class='main'>
+  <view class='main-bg'>
+    <view class='headImg'>
+      <image src='../../img/g7.png'></image>
+    </view>
+    <view class='name'>上善若水</view>
+    <view class='guanzhu' wx:if="{{guanhzu}}">
+      <image src='../../img/guan.png'></image>
+      <text>关注</text>
+    </view>
+    <view class='guanzhu1'>
+      关注
+    </view>
+  </view>
+</view>

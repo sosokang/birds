@@ -1,0 +1,54 @@
+<!--pages/res/res.wxml-->
+<view class='main'>
+  <view class='mian-bg'>
+    <view class='main-con'>
+      <view class='con-left'>
+        <!-- <image src='../../img/phone@2x.png'></image> -->
+      </view>
+      <view class='con-con'>
+        <input placeholder='请输入手机号' placeholder-class='con-input' bindblur="phone" />
+      </view>
+      <!-- <view class='con-right'>
+        <image src='../../img/Backspace@2x.png'></image>
+      </view> -->
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con2'>
+        <image src='../../img/lock@2x.png'></image>     
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='请输入密码(至少六位字符)' placeholder-class='con-input' bindblur="password" type='password'/>
+      </view>
+      <!-- <view class='con-right'>
+        <image wx:if="{{!eyes}}" src='../../img/close_eyes@2x.png' class='close'></image>
+        <image wx:else src='../../img/open_eyes@2x.png' class='open'></image>
+      </view> -->
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con2'>
+        <image src='../../img/nickname@2x.png'></image>
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='请设置昵称' placeholder-class='con-input' bindblur="user" />
+      </view>
+    </view>
+    <view class='main-line main-con'>
+      <view class='con-left con4'>
+        <image src='../../img/key@2x.png'></image>
+      </view>
+      <view class='con-line con-con'>
+        <input placeholder='请输入验证码' placeholder-class='con-input' bindblur="vCode" />
+      </view>
+      <view class='con-bo'>
+        <view class='bo-line'></view>
+        <view style="color:#7faf41; font-size:30rpx; float:left;margin-top:10rpx;" wx:if="{{fasong==2}}">{{min}}s</view>
+        <view style="color:#7faf41; font-size:30rpx; float:left;margin-top:10rpx; " wx:if="{{fasong==1}}" bindtap='sendyzm'>获取验证码</view>
+      </view>
+    </view>
+    <button class='btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">注册</button>
+    <view class='txt'>登录后意味着同意
+      <text style="color:#333;">爱鸟网</text>的
+      <text style="color:#7faf41;">《使用协议》</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,168 @@
+/* pages/billing/billing.wxss */
+.billing .headTitle {
+  width: 690rpx;
+  height: 112rpx;
+  margin: 0 30rpx;
+}
+.billing .headTitle .headTab {
+  display: inline-block;
+  margin: 20rpx 0 20rpx 146rpx;
+  /* width: 390rpx; */
+  height: 64rpx;
+  border: 4rpx solid #7faf41;
+  border-radius: 4rpx;
+}
+.headTitle .headTab text {
+  display: inline-block;
+  width: 127rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  background: #fff;
+  border-right: 4rpx solid #7faf41;
+}
+.headTitle .headTab text:last-child{
+  border-right: none;width: 131rpx;
+}
+.headTitle .headTab text.active {
+  color: #fff;
+  background: #7faf41;
+}
+.headTitle .total {
+  margin-top: 30rpx;
+  position: relative;
+}
+.headTitle .total .zong {
+width: 70rpx;height: 45rpx;
+}
+
+.billing .headImg {
+  position: relative;
+}
+.billing .headImg image{
+  width: 750rpx;
+  height: 375rpx;
+}
+.billing .headImg .title_first {
+  display: inline-block;
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  /* background: rgba(158, 160, 162, .5); */
+  position: absolute;
+  top: 120rpx;
+  left: 0rpx;
+}
+.billing .headImg .title_second {
+  display: inline-block;
+  width: 100%;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 45rpx;
+  color: #fff;
+  text-align: center;
+  /* background: rgba(158, 160, 162, .5); */
+  position: absolute;
+  top: 190rpx;
+  left: 00rpx;
+}
+.content .birdsDetail, .content .logsDetail, .content .pointsDetail {
+  display: none;
+}
+.content .birdsDetail.active, .content .logsDetail.active, .content .pointsDetail.active {
+  display: block;
+}
+
+/* pages/myfans/myfans.wxss */
+.birdsDetail {
+  width: 690rpx;
+  /* height: 500rpx; */
+  padding: 0 30rpx;
+  border-top: 1px solid #ececec;
+}
+.birdsDetail .fans {
+  height: 94rpx;
+  padding: 22rpx 0;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
+.birdsDetail .fans .indexNum {
+  display: inline-block;
+  height: 94rpx;
+  line-height: 94rpx;
+  margin-right: 24rpx;
+  vertical-align: top;
+}
+.birdsDetail .fans .img{
+  display: inline-block;
+  margin-right: 14rpx;
+  width: 94rpx;
+  height: 94rpx;
+}
+.birdsDetail .fans .img image {
+  border-radius: 50%;
+}
+.birdsDetail .fans .name {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #000;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: top;
+  margin-top: 15rpx;
+} 
+.birdsDetail .fans .number {
+  display: block;
+  font-size: 22rpx;
+  color: #000;
+  height: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  left: 130rpx;
+  top: 80rpx;
+} 
+.birdsDetail .fans .number text {
+  display: inline-block;
+  margin-right: 10rpx;
+  font-size: 36rpx;
+  color: #8ab552;
+}
+.birdsDetail .fans .focus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  background: #7faf41;
+  margin-top: 22rpx;
+  border-radius: 5rpx;
+}
+.birdsDetail .fans .focus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}
+.birdsDetail .fans .nofocus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #a2a2a2;
+  text-align: center;
+  background: #ececec;
+  margin-top: 22rpx;
+  border-radius: 5rpx;
+}
+.birdsDetail .fans .nofocus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}

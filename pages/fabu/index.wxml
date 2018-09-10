@@ -1,0 +1,132 @@
+<view wx:if="{{page==1}}">
+  <view class='fabu_top' style='height:{{coverImgHeight}}rpx'>
+    <image src="{{top_img}}" class='bg' style='height:{{coverImgHeight}}rpx'></image>
+    <image src='../../img/guan.png' class='huan' style='display:{{huan_top}}' bindtap='huan_img'></image>
+  </view>
+  <view class='fabu_title'>
+    <input placeholder='标题不超过40字' class='fabu_title_input' placeholder-class='hui' bindinput='onBindBlur' value='{{title}}'></input>
+  </view>
+  <view class='niao_fenlei'>
+    <view class='niao_a' wx:if="{{niao_info}}" wx:for="{{niao_info}}" wx:key="{{item}}">
+      <input class='niao_zhong' placeholder='点击选择鸟种' placeholder-class='hui' disabled='disabled' value='{{item.name||item.genus}}' class='fenlei_input'></input>
+      <view class='num_box'>
+        <view class='yunsuan' bindtap='jian1' data-index='{{index}}'>-</view>
+        <view class='yunsuan_num' style="color:{{item.niao_num > 1||item.num>1 ?'#000':'#a2a2a2'}}">
+          <input value='{{item.niao_num||item.num}}只' bindconfirm="onconfirm" data-index='{{index}}'></input><text class='zhi'></text>
+        </view>
+        <view class='yunsuan' bindtap='jia1' data-index='{{index}}'>+</view>
+        <image src='{{yunsuan_img}}' class='yunsuan_img' data-index='{{index}}' bindtap='delNiao'></image>
+      </view>
+    </view>
+    <view class='niao_a'>
+      <input class='niao_zhong' placeholder='点击选择鸟种' placeholder-class='hui' disabled='disabled' value='{{}}' class='fenlei_input'></input>
+      <view class='num_box'>
+        <view class='yunsuan' bindtap='jian1'>-</view>
+        <view class='yunsuan_num' style="color:{{niao_num1 > 1 ?'#000':'#a2a2a2'}}">1 只</view>
+        <view class='yunsuan' bindtap='jia1'>+</view>
+        <image src='{{yunsuan_img}}' class='yunsuan_img'></image>
+      </view>
+      <view class='niaob' style='display:{{}}' bindtap='xuanze_niao'>
+      </view>
+    </view>
+  </view>
+  <view class='xiangqing' wx:if="{{xq_display=='1'}}">
+      <view class='niao_b'>
+        <text class='text_a'>时间</text>
+        <view class='right_box'>
+          <image src='../../img/arrow_right_grey.png' class='arrow_right_grey'></image>
+          <picker mode="date" value="{{dates}}" start="1978-01-01" end="2100-1-23" bindchange="bindDateChange">
+              <view class="picker">  
+                {{dates}}
+              </view>  
+          </picker>  
+          
+        </view>
+      </view>
+      <view class='niao_b'>
+        <text class='text_a'>位置</text>
+        <view class='right_box' bindtap='position'>
+          <image src='../../img/arrow_right_grey.png' class='arrow_right_grey' bindtap=''></image>
+          <text class='picker'>{{position.name||address}}</text>  
+        </view>
+      </view>
+      <view class='niao_b'>
+        <text class='text_a'>生境</text>
+        <view class='right_box' bindtap='shengjing'>
+          <image src='../../img/arrow_right_grey.png' class='arrow_right_grey'></image>
+          <text class='picker'>{{shengjing}}</text>  
+        </view>
+      </view>
+  </view>
+  <view class="para-add-container">
+    <view class="para-add-outer" wx:if="{{Adding}}">
+        <view class="para-adding1">
+            <view catchtap="addText1" class="adding-li text1" data-index="-1">
+                <image mode="aspectFill" src="/img/release_text.png"></image><text>添加文本</text>
+            </view>
+            <view catchtap="addImg1" class="adding-li photo1" data-index="-1">
+                <image mode="aspectFill" src="/img/release_image.png"></image><text>添加图片</text>
+            </view>
+        </view>
+    </view>
+    <view class="para-add-outer" wx:if="{{firstAdding}}">
+        <view class="para-adding">
+            <view catchtap="addText" class="adding-li text" data-index="-1">
+                <image mode="aspectFill" src="/img/release_text.png"></image><text>文本</text>
+            </view>
+            <view catchtap="addImg" class="adding-li photo" data-index="-1">
+                <image mode="aspectFill" src="/img/release_image.png"></image><text>图片</text>
+            </view>
+        </view>
+    </view>
+    <view catchtap="expandFirstAdd" class="para-add-outer"  wx:if="{{Adding2}}">
+        <view class="para-add" bindtap='para_add'>
+            <image src='/img/add_white.png'></image>
+        </view>
+    </view>
+  </view>
+  <view class="para-container" wx:for="{{paraList}}" wx:for-item="para" wx:key="index">
+    <block wx:if="{{para.img||para.text||para.imgUrl||para.message}}">
+        <view class="para">
+          <image bindtap="delPara" class="btn-del-para" data-index="{{index}}" src='/img/delete_ImTe.png'></image>
+          <view class="thumb">
+              <image bindtap="editImg" data-index="{{index}}" mode="aspectFill" src="{{para.img||para.imgUrl||'/img/text_preview.png'}}" class='bg'></image>
+          </view>
+          <view >
+            <!-- {{para.text||para.niao_name||'添加鸟名'}} -->
+            <input bindinput="oninput" placeholder='添加鸟名' value="{{para.imgTag||''}}" bindtap="editPara" class="text line-clamp-4 {{para.text?'has-content':''}}" data-index="{{index}}" wx:if="{{para.img||para.imgUrl}}"
+            disabled='disabled' data-index="{{index}}"></input>
+            <view wx:if="{{para.text||para.message}}" class='para_text'>{{para.text||para.message}}</view>
+          </view>
+          <view class="up-down-container">
+              <image bindtap="pullUp" class="btn-up icon-xiangshang {{index===0?'first-child':''}}" data-index="{{index}}" src='/img/arrow_top_green.png'></image>
+              <image bindtap="pullDown" class="btn-down icon-xiangshang {{index===paraList.length-1?'last-child':''}}" data-index="{{index}}" src='/img/arrow_down_green.png'></image>
+          </view>
+        </view>
+        <view class="para-add-container">
+          <view class="para-add-outer" wx:if="{{para.adding}}">
+              <view class="para-adding">
+                  <view catchtap="addImg" class="adding-li photo" data-index="{{index}}">
+                      <image mode="aspectFill" src="/img/release_image.png"></image><text>图片</text>
+                  </view>
+                  <view catchtap="addText" class="adding-li text" data-index="{{index}}">
+                      <image mode="aspectFill" src="/img/release_text.png"></image><text>文本</text>
+                  </view>
+              </view>
+          </view>
+          <view catchtap="expandlastAdd" class="para-add-outer" data-index="{{index}}" wx:else>
+              <view class="para-add" bindtap='para_add1' data-index="{{index}}">
+                  <image src='/img/add_white.png'></image>
+              </view>
+          </view>
+        </view>
+    </block>
+  </view>
+  <view class='fabu_submit' bindtap='tuichu' style='background:#ffad29;'>退出</view>
+  <view class='fabu_submit' bindtap='fabu'>发布</view>
+</view>
+<view class='' wx:if="{{page==2}}">
+  <view wx:for="{{paraList}}" wx:key="index">
+    <image src='{{item.img||item.imgUrl}}' wx:if="{{item.isImg==1}}" class='top_img' data-aid='{{item.aid}}' data-img='{{item.img||item.imgUrl}}' bindtap='xuanze_topimg'></image>
+  </view>
+</view>

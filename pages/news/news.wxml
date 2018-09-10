@@ -1,0 +1,35 @@
+<!--pages/news/news.wxml-->
+<view class='main' wx:for="{{article_list}}" wx:key="{{item}}" data-tid='{{item.aid}}' data-article_status='{{item.article_status}}'>
+  <view class='main-bg'>
+    <image src='{{item.img}}' bindtap='detail' data-tid='{{item.aid}}' data-index='{{index}}' ></image>
+  </view>
+  <view class='title'>{{item.title}}</view>
+  <view class='contentThree'>
+    <view class='bottom clear'>
+     <view class='icon lt' bindtap='zhuanfa' data-tid='{{item.aid}}'>
+        <image src='../../img/operat_icon_forward@2x.png' class='operat lt'></image>
+        <text>转发</text> 
+      </view>
+      <view class='icon lt' bindtap='collectArticle' data-tid='{{item.aid}}' data-index='{{index}}' data-article_list='{{article_list}}'>
+        <image src='../../img/operat_big_icon_collect@2x.png' class='operat lt' wx:if="{{item.isCollection==0}}" ></image>
+        <image src='../../img/operat_big_icon_collected@2x.png' class='operat lt' wx:if="{{item.isCollection>0}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class='icon lt' bindtap='comment' data-article_status='{{item.article_status}}' data-tid='{{item.aid}}' data-index='{{index}}'>
+        <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+        <text wx:if="{{item.commentNum==0}}">评论</text>
+        <text wx:if="{{item.commentNum>0}}">{{item.commentNum}}</text>
+      </view>
+      <view class='icon lt' bindtap='upArticle' data-tid='{{item.aid}}' data-index='{{index}}' data-article_list='{{article_list}}'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{item.isUp==0}}"></image>
+        <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{item.isUp>0}}"></image>
+        <text wx:if="{{item.upNum==0}}">点赞</text>
+        <text wx:if="{{item.upNum>0}}">{{item.upNum}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='zhuanfabox {{arrowtop}}' wx:if="{{zhuanfapage == 3}}" bindtap='yincang'>
+  <button class='zhuanfa1' hover-class='none' bindtap='creathaibao'></button>
+  <button class='zhuanfa2' open-type='share' hover-class='none'></button>
+</view>

@@ -1,0 +1,292 @@
+/* pages/findUser/findUser.wxss */
+.birdUser {
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+}
+.birdUser .search {
+  position: relative;
+}
+.birdUser .search input {
+  display: inline-block;
+  width: 624rpx;
+  height: 66rpx;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  margin: 20rpx 30rpx 11rpx;
+  padding-left: 65rpx;
+}
+.birdUser .search image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 37rpx;
+  left: 52rpx;
+  z-index: 1;
+}
+.plc {
+  font-size: 28rpx;
+}
+.classTab {
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #ededed;
+  background: #fff;
+}
+.classTab view {
+  display: inline-block;
+  margin: 32rpx 40rpx 17rpx 16rpx;
+}
+.classTab .radio {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;        
+  border: 2rpx solid #D2D2D2;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.classTab .radio::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  background: #D2D2D2;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%; 
+}
+.classTab .gradio {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;        
+  border: 2rpx solid #7faf41;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.classTab .gradio::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  background: #7faf41;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%; 
+}
+.fs24 {
+  font-size: 24rpx;
+  color: #7f7f7f;
+}
+.c-7faf41 {
+  color: #7faf41;
+}
+.birdUser .birdsClassify, .birdUser .birdDetails, .birdUser .headuser, .birdUser .zixun{
+  display: none !important;
+}
+.birdUser .birdsClassify.active, .birdUser .birdDetails.active, .birdUser .headuser.active, .birdUser .zixun.active{
+  display: block !important;
+}
+/* 鸟种 */
+.headuser {
+  width: 690rpx;
+  padding: 0 30rpx;
+  background: #fff;
+}
+.headuser .user {
+  height: 135rpx;
+  line-height: 135rpx;
+}
+.headuser .img{
+  display: inline-block;
+  margin-right: 14rpx;
+  width: 94rpx;
+  height: 94rpx;
+  vertical-align: middle;
+}
+.headuser .img image {
+  border-radius: 50%;
+}
+.headuser .name {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #000;
+  height: 94rpx;
+  line-height: 94rpx;
+} 
+.headuser .focus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  background: #7faf41;
+  margin-top: 40rpx;
+  border-radius: 5rpx;
+}
+.headuser .focus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}
+.headuser .nofocus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #a2a2a2;
+  text-align: center;
+  background: #ececec;
+  margin-top: 40rpx;
+  border-radius: 5rpx;
+}
+.headuser .nofocus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}
+/* 鸟种 */
+.usSearch {
+  width: 690rpx;
+  padding: 0 30rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 22rpx;
+  color: #7f7f7f;
+  background: #fff;
+}
+.birdslists {
+  width: 690rpx;
+  padding: 0 30rpx;
+  background: #fff;
+}
+.birdslists .item {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #7f7f7f;
+  padding: 15rpx 30rpx;
+  border-radius: 5rpx;
+  background: #ececec;
+  margin: 0 30rpx 15rpx 0;
+}
+/* 话题 */
+.birdDetails {
+  /* margin-bottom: 20rpx; */
+}
+.birdDetails .imgUrl {
+  height: 509rpx;
+}
+.birdDetails .summary {
+  padding: 0 30rpx;
+  margin: 42rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+}
+.birdDetails .icons {
+  margin: 0 30rpx;
+  width: 690rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  border-top: 2rpx solid #ccc;
+  background: #fff;
+}
+.birdDetails .icons label {
+  display: inline-block;
+  margin-right: 40rpx;
+}
+.birdDetails .icons image {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.birdDetails .icons text {
+  font-size: 20rpx;
+  color: #a2a2a2;
+}
+/* 话题 */
+.zixun {
+  /* margin-bottom: 20rpx; */
+}
+.zixun .imgUrl {
+  height: 509rpx;
+}
+.zixun .summary {
+  padding: 0 30rpx;
+  margin: 42rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+}
+.zixun .icons {
+  margin: 0 30rpx;
+  width: 690rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  border-top: 2rpx solid #ccc;
+  background: #fff;
+}
+.zixun .icons label {
+  display: inline-block;
+  margin-right: 40rpx;
+}
+.zixun .icons image {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.zixun .icons text {
+  font-size: 20rpx;
+  color: #a2a2a2;
+}
+.con-line{
+  width: 91.2%;
+  height: 2rpx;
+  background: #ececec;
+  margin: 30rpx auto;
+}
+.lt {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+.gz {
+  font-size: 28rpx;
+  color: #7faf41;
+  margin: -78rpx auto auto 0;
+}
+.bottom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom .icon {
+  margin-right: 44rpx;
+}
+
+.operat {
+  width: 45rpx;
+  height: 44rpx;
+  margin: 22rpx 13rpx 33rpx 0;
+}
+
+.bottom text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 3.8em;
+}
+.birdDetails_box,.zixun_box{margin: 20rpx 0;background: #fff;}
+.niao_name{font-size: 24rpx;margin-left: 20rpx;float:left;}
+.name_la{font-size: 20rpx;font-style: italic;}

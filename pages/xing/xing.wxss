@@ -1,0 +1,175 @@
+/* pages/xing/xing.wxss */
+page{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-bg{
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #ccc; 
+}
+.head{
+  width:690rpx;
+  margin: 38rpx auto 0;
+}
+.submit{width: 110rpx;height: 60rpx;border: solid 1rpx #7faf41;font-size: 28rpx;color: #7faf41;position: fixed;right:30rpx;top:30rpx;text-align: center;line-height: 60rpx;border-radius: 6rpx;}
+.daxiao_box{width: 568rpx;margin: 240rpx auto 0;overflow: hidden; display: flex;text-align: center;}
+.daxiao{display: flex;align-items:flex-end;flex-direction:row;width: 150rpx;margin-left:-12rpx;}
+.daxiao:first-child{margin-left:0rpx;}
+.daxiao view{margin: 0 auto;}
+.daxiao img{}
+.line{align-items:center;padding: 32rpx 0 16rpx;overflow: hidden;width: 152rpx;position: relative;display: flex;
+    align-items: center;}
+.xian{width: 128rpx;height: 2rpx;background: #b2b2b2;float: left;margin-top: 5rpx;vertical-align: middle;align-items:center;}
+.yuandian{width: 12rpx;height: 12rpx;background: #b2b2b2;border-radius: 50%;float: left}
+.daxiao img{}
+.num{
+  width:40rpx;
+  height: 40rpx;
+  background: #7faf41;
+  border-radius: 50rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+.txt{
+  margin-left: 18rpx;
+  margin-top: -6rpx;
+  font-size: 36rpx;
+}
+image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.topic{
+  width:100%; 
+  margin: 40rpx auto;
+  border-top: 1px solid #ececec;
+  /* border-bottom: 1px solid #ccc; */
+  overflow: hidden;
+}
+.topic-list{
+ float: left; 
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  width: 186rpx;
+  height: 186rpx;
+}
+.topic-list1{float: left; 
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  width: 249rpx;
+  height: 206rpx;}
+.topic-list2{float: left; 
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  width: 249rpx;
+  height: 173rpx;}
+.topic-list:nth-child(4),.topic-list:nth-child(8),.topic-list:nth-child(12),.topic-list:nth-child(16){border-right:none;}
+.topic-list1:nth-child(3),.topic-list1:nth-child(6){border-right:none;}
+.topic-list2:nth-child(3),.topic-list2:nth-child(6),.topic-list2:nth-child(9){border-right:none;}
+.right-none{
+  border-right: none;
+}
+.topic-list image{
+  width:128rpx;
+  height: 122rpx;margin:10rpx auto;
+}
+.topic-list1 image{
+  width:125rpx;
+  height: 125rpx;margin:25rpx auto 15rpx;
+}
+.topic-list2 image{
+  width:98rpx;
+  height: 60rpx;margin:40rpx auto 30rpx;
+}
+.topic-list text,.topic-list1 text,.topic-list2 text{
+  font-size: 22rpx;
+  color: #333;text-align: center;display: block;
+}
+.btn{
+  width: 650rpx;
+  height: 84rpx;
+  background: #7faf41;
+  text-align: center;
+  line-height: 84rpx;
+  color: #fff;
+   margin: 0 auto; 
+  border-radius: 4rpx;
+}
+.topic-btn{
+  width: 650rpx;
+  height: 84rpx;
+  background: #7faf41;
+  text-align: center;
+  line-height: 84rpx;
+  color: #fff;
+  border-radius: 4rpx;
+  position: absolute;
+  bottom:100rpx;
+  left:50rpx;
+}
+.mainColor{
+  width: 100%;
+  height: 100%;
+}
+.mainContent{
+  width:100%; 
+  margin: 40rpx auto;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  overflow: hidden;
+}
+.content{
+ float: left; 
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 40rpx 70rpx 20rpx;
+}
+.right-none{
+  border-right: none;
+}
+.content .bg{
+  width:98rpx;
+  height: 60rpx;
+  background: #000;
+  border-radius: 5rpx;
+}
+.content text{
+  font-size: 22rpx;
+  color: #333;
+  margin-top: 30rpx;
+  margin: 32rpx;
+}
+.contents{
+ float: left; 
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 40rpx 60rpx 20rpx;
+}
+.contents image{
+  width:125rpx;
+  height: 125rpx;
+}
+.contents text{
+  font-size: 22rpx;
+  color: #333;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+}
+.niao_box{
+  width:100%;
+  background: #fff;
+}
+.niao_box_bg{
+  width:92%;
+  margin: 0 auto;
+  padding: 16rpx 0;
+  border-bottom: 1px solid #ececec;
+}
+.niao_name{font-size: 24rpx;margin-left: 20rpx;float:left;}
+.name_la{font-size: 20rpx;font-style: italic;}

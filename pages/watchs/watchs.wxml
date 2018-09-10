@@ -1,0 +1,240 @@
+<!--pages/watchs/watchs.wxml-->
+<view class='main'>
+  <view class='main-bg'>
+    <image src='../../img/stock.png'></image>
+    <view class='time'>倒计时：66 天 7 时 49 分</view>
+  </view>
+  <view class='head'>
+    <view class='headImg lt'>
+      <image src='../../img/0R5032554.png'></image>
+    </view>
+    <view class='headTxt lt'>渔舟唱晚</view>
+    <view class='jibie lt'>
+      <image src='../../img/ling.png'></image>
+    </view>
+    <view class='right lt'>关注</view>
+  </view>
+  <view class='title'>
+    A9就是好，“菜鸟”瞬间会打鸟！瞬间会打鸟！ 瞬间会打鸟！
+  </view>
+  <view class='bottom clear'>
+    <view class='price lt'>价格
+      <text>￥</text>
+      <text>199</text>
+    </view>
+    <view class='date rt'>出团日期：11/1—11/30 </view>
+  </view>
+  <view class='topic clear'>
+    <view class='topic-list'>
+      <text>行程介绍</text>
+    </view>
+    <view class='topic-list'>
+      <text>报名须知</text>
+    </view>
+    <view class='topic-list right-none'>
+      <text>形成标准</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='contentTitle'>行程介绍</view>
+    <view class='oneDay'>
+      <view class='dayBorder'>
+        <view class='dayImg'>
+          <image src='../../img/trave_location.png'></image>
+        </view>
+        <text>第一天</text>
+      </view>
+      <view class='dayTxt'>南宁—上海—大阪—京都 住京都</view>
+    </view>
+    <view class='oneContent'>
+      <view class='des'>
+        汇合后，乘坐东方航空的航班12:35-15:40抵达大阪，出关后乘坐电车前往京都，酒店check in后，自由活动。
+      </view>
+      <view class='desImg'>
+        <image src='../../img/stock-photo-174035143.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='contentOne'></view>
+  <view class='content'>
+    <view class='contentTitle'>报名须知</view>
+    <view class='desLeft'>
+      <view>
+        <text>报名截止时间：</text>
+        <text>2016年9月30日</text>
+      </view>
+      <view>
+        <text>活动费用：</text>
+        <text>不含机票及签证费）</text>
+      </view>
+      <view>
+        <text>集合时间：</text>
+        <text>11月16日 ）</text>
+      </view>
+      <view>
+        <text>集合地点：</text>
+        <text>上海浦东国</text>
+      </view>
+      <view>
+        <text>建议航班：</text>
+        <view class='dateH'>11月11日</view>
+        <view>Fm</view>
+        <view class='dateH'>11月11日</view>
+        <view>Fm</view>
+      </view>
+      <view class='chuxing'>
+        <text>出行方式：</text>
+        <text>11月16日大巴</text>
+      </view>
+      <view>
+        <text>报名方式：</text>
+        <text>联系人</text>
+      </view>
+    </view>
+  </view>
+  <view class='contentOne'></view>
+  <view class='content clear'>
+    <view class='contentTitle'>行程标准</view>
+    <view class='titleA'>
+      <view class='titleImg lt'>
+        <image src='../../img/biao.png'></image>
+      </view>
+      <view class='titleS'>
+        <view class='titleB lt'>用餐标准</view>
+        <view class='titleContent lt'>
+          全程以日本料理为主，优选用餐餐厅， 全程不进入专门接待旅游团的团队餐厅。
+        </view>
+      </view>
+
+    </view>
+    <view class='titleA'>
+      <view class='titleImg lt'>
+        <image src='../../img/biaozhun2.png'></image>
+      </view>
+      <view class='titleS'>
+        <view class='titleB lt'>住宿标准</view>
+        <view class='titleContent lt'>
+          全程以日本料理为主，优选用餐餐厅， 全程不进入专门接待旅游团的团队餐厅。
+        </view>
+      </view>
+
+    </view>
+    <view class='titleA'>
+      <view class='titleImg lt'>
+        <image src='../../img/biaozhun3.png'></image>
+      </view>
+      <view class='titleS lt'>
+        <view class='titleB'>交通标准</view>
+        <view class='titleContent'>
+          飞机 高铁 大巴
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='contentOne'></view>
+  <view class='content'>
+    <view class='contentTitle'>摄影指导</view>
+  </view>
+  <view class='main-bg' style='padding-top:36rpx;'>
+    <image src='../../img/stock.png'></image>
+  </view>
+  <view class='heads clear'>
+    <view class='headImgs lt'>
+      <image src='../../img/0R5032554-7.png'></image>
+      <image src='../../img/sex_man.png' class='sex' wx:if="{{sex}}"></image>
+      <image src='../../img/sex_woman.png' class='sex' wx:else></image>
+    </view>
+    <view class='headLt'>
+      <view class='headTxts lt'>渔舟唱晚</view>
+      <view class='jibie1s lt'>Lv.3</view>
+      <image src='../../img/ling1.png' class='lingdui lt'></image>
+    </view>
+
+    <view class='jianjie lt'>简介：环球旅行摄影师。</view>
+    <view class='rights rt'>了解更多></view>
+  </view>
+
+  <view class='contentOne'></view>
+  <view class='content'>
+    <view class='contentTitle'>行程亮点</view>
+  </view>
+  <scroll-view scroll-x bindscroll="scroll" style="width:1500rpx;">
+    <view class='scrollContent'>
+      <image src='../../img/stock.png'></image>
+    </view>
+    <view class='scrollTitle'>
+      <view class='titleTop'>海风不息 浪漫不止</view>
+      <view class='titleTxt'>全程管家服务 五星酒店 餐饮升级</view>
+    </view>
+    <!-- <view class='scrollContent'>
+      <image src='../../img/stock.png'></image>
+    </view> -->
+  </scroll-view>
+  <view class='contentOne'></view>
+  <view class='contentZ clear'>
+    <view class='zanImg lt'>
+      <image src='../../img/g7.png'></image>
+    </view>
+    <view class='zanTxt rt'>已有32人赞过</view>
+  </view>
+
+  <view class='contentH '>
+    <view class='num'>
+      已有18人评论过
+    </view>
+    <view class='headH clear'>
+      <view class='headImg lt'>
+        <image src='../../img/g7.png'></image>
+      </view>
+      <view class='name lt'>四幕戏</view>
+      <view class='dates lt'>32分钟前</view>
+      <view class='rightImg rt' bindtap='like'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat' wx:if="{{!like}}"></image>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat' wx:else></image>
+      </view>
+      <view class='headContent lt'>
+        我年过六旬，平日是以风光为主的摄影爱好者，当遇见自然界的鸟类、野生动物等就是顺手拍来自意大利艺术家 Giorgia Valli
+      </view>
+    </view>
+    <view class='headH clear'>
+      <view class='headImg lt'>
+        <image src='../../img/g7.png'></image>
+      </view>
+      <view class='name lt'>四幕戏</view>
+      <view class='dates lt'>32分钟前</view>
+      <view class='rightImg rt'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat' wx:if="{{!like}}"></image>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat' wx:else></image>
+      </view>
+      <view class='headContent lt'>
+        我年过六旬，平日是以风光为主的摄影爱好者，当遇见自然界的鸟类、野生动物等就是顺手拍来自意大利艺术家 Giorgia Valli
+      </view>
+      <view class='huifu headContent lt'>
+        回复
+      </view>
+    </view>
+    <view class='sha'>
+      <image src='../../img/sha.png'></image>
+    </view>
+  </view>
+
+
+
+
+</view>
+<view class='foot '>
+  <view class='icon lt' bindtap='comment'>
+    <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+    <text wx:if="{{!comment}}">评论</text>
+    <text wx:else>23</text>
+  </view>
+  <view class='icon lt' bindtap='like'>
+    <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{!like}}"></image>
+    <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:else></image>
+    <text wx:if="{{!like}}">点赞</text>
+    <text wx:else>23</text>
+  </view>
+  <view class='baoming lt '>
+    立即报名
+  </view>
+</view>

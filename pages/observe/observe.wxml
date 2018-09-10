@@ -1,0 +1,29 @@
+<!--pages/observe/observe.wxml-->
+<view class='main'>
+  <view class="time-axis">
+    <view class="time-axis-item clear"  wx:for="{{article_list}}" wx:key="{{item}}" data-tid='{{item.tid}}' >
+      <view class="time-axis-date lt">
+        <text>{{item.dateline_day}}\n</text>
+        <text>{{item.dateline_month}}月</text>
+        <span class="lt"></span>
+      </view>
+      <view class='title lt'>
+        <view class="title1 time-axis-title">
+          <view class='dian yuan'></view>
+          <view class='contitle clear' wx:if="{{item.point!=''}}">
+            <image src='../../img/adress1.png' class='lt'></image>
+            <view class='lt'>{{item.point}}</view>
+          </view>
+          <view class='conImg'>
+            <image src='{{item.imgUrl}}' data-tid='{{item.tid}}' bindtap='detail'></image>
+          </view>
+          <view class='bottom clear'>
+            <text data-authorid='{{item.authorid}}' bindtap='other' >作者：{{item.authorName}} </text>
+            <text class='date rt'>共{{item.imgdNum}}张</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

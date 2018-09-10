@@ -1,0 +1,551 @@
+/* pages/my/my.wxss */
+page {
+  background: #ececec;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-bottom: 100rpx; 
+}
+.main{
+  height: 100%;
+}
+.main-bg {
+  width: 100%;
+  height: 470rpx;
+  background: #fff;
+  position: relative;
+}
+.main-bg .topSet {
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.main-bg .topSet .inform {
+  float: left;
+  width: 34rpx;
+  height: 42rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.main-bg .topSet .message {
+  float: left;
+  width: 38rpx;
+  height: 38rpx;
+  margin-left: 40rpx;
+  margin-top: 12rpx;
+}
+.main-bg .topSet .forward {
+  float: right;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 40rpx;
+  margin-top: 12rpx;
+}
+.main-bg .topSet .setting {
+  float: right;
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+.head {
+  position: absolute;
+  top: 100rpx;
+  left: 290rpx;
+}
+.head image{
+  width: 166rpx;
+  height: 166rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(250, 250, 250,0.6);
+}
+ .main-bg .user{
+  width: 100%;
+  font-size: 30rpx;
+  color: #fff;
+  position: absolute;
+  top: 282rpx;
+  text-align: center;
+  /* text-shadow: 0rpx 2rpx 1rpx #fff; */
+}
+/*.main-bg .sign {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #ccc;
+} */
+.headBottom{
+  width:100%;
+  font-size: 20rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 26rpx;
+  left:50%;transform: translate(-50%,0);
+  right: 0rpx;text-align: center;line-height: 26rpx;
+}
+.headBottom view{
+  padding: 0 40rpx 0 40rpx;
+  border-right: 1px solid #fff;display: inline-block;font-size: 26rpx;
+}
+.headBottom view:last-child{
+  border-right: none;
+}
+.headBottom text{
+  /* font-size: 30rpx; */
+  /* padding-left: 8rpx;  */
+}
+.mainContent{
+  width: 100%;
+  height: 142rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+  position: relative;
+}
+.mainContent view{
+  width: 20%;
+  text-align: center;
+}
+ .mainContent image{
+  width: 48rpx;
+  height: 48rpx;
+  margin: 28rpx auto 15rpx;
+}
+.mainContent text{
+  font-size:22rpx;
+}
+/* .red{
+  position: absolute;
+  right: 90rpx;
+  top: 20rpx;
+  width: 10rpx;
+  height: 10rpx;
+  padding: 0 !important;
+  background: #eb6877;
+  border-radius: 50%;
+} */
+.tishi{
+  font-size: 24rpx;
+  text-align: center;
+  margin: 40rpx 0 10rpx;
+  color: #7f7f7f;
+}
+.tishi text{
+  color: #eb6877;
+}
+.mainContent .active{
+  color: #7faf41;
+}
+.journalList {
+  display: none;
+}
+
+
+
+
+
+
+.headTxts {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+.headTxts {
+  font-size: 32rpx;
+  color: #333;
+}
+.jibies {
+  width: 54rpx;
+  height: 26rpx;
+  background: #7faf41;
+  text-align: center;
+  line-height: 26rpx;
+  font-size: 18rpx;
+  color: #fff;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  border-radius: 4rpx;
+}
+
+.rights {
+  font-size: 28rpx;
+  color: #7faf41;
+  margin-left: 315rpx;
+  margin-top: 5rpx;
+}
+
+.contents {
+  width: auto;
+  height: auto;
+  border-radius: 5rpx;
+  background: #fff;
+  margin-left: 65rpx;
+  margin-top: 13rpx;
+  position: relative;
+}
+
+.contents::before {
+  content: '';
+  position: absolute;
+  top: -20rpx;
+  left: 32rpx;
+  width: 0;
+  height: 0;
+  border-bottom: 20rpx solid #fff;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+}
+
+.titles {
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #333;
+  margin: 28rpx 20rpx 0;
+  font-weight: 900;
+}
+
+.conImgs {
+  width: 565rpx;
+  height: 390rpx;
+  margin: 22rpx 20rpx 22rpx 20rpx;
+  position: relative;
+}
+
+.eye {
+  width: 35rpx;
+  height: 22rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 70rpx;
+}
+
+.conImgs text {
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  top: 15rpx;
+  right: 30rpx;
+}
+.bottom{
+  display: inline-block;
+}
+.operat{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 22rpx 20rpx 33rpx 20rpx;
+}
+.bottom text{
+  font-size: 21rpx;
+  color: #999;
+  line-height: 3.7em;
+}
+
+
+/* journalList */
+.journalList {
+  width: 700rpx;
+  margin: 0 30rpx 0 20rpx;
+  padding-bottom: 45rpx;
+}
+.journalList .dates {
+  overflow: hidden;
+  position: relative;
+}
+.journalList .dateDay {
+  width: 60rpx;
+  font-size: 30rpx;
+  color: #000;
+  text-align: center;
+  position: absolute;
+  top: 0rpx;
+}
+.journalList .dateMonth {
+  width: 60rpx;
+  font-size: 20rpx;
+  color: #a2a2a2;
+  text-align: center;
+  position: absolute;
+  top: 40rpx;
+}
+.journalList .dateLine {
+  width: 610rpx;
+  float: right;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  border-left: 4rpx solid #dcdcdc;
+  position: relative;
+}
+.journalList .dateLine .details {
+  background: #fff;
+  padding: 5rpx;
+}
+.yuan {
+  width: 16rpx;
+  height: 16rpx;
+  background: #33d1bf;
+  border-radius: 50%;
+  position: absolute;
+  left: -10rpx;
+}
+.journalList .birdName {
+  font-size: 22rpx;
+  color: #7f7f7f;
+  margin-left: 28rpx;
+  margin-bottom: 15rpx;
+}
+.journalList .more {
+  float: right;
+  width: 37rpx;
+  height: 6rpx;
+  margin: 20rpx 26rpx 0 0;
+}
+.journalList .author {
+  font-size: 20rpx;
+  color: #7f7f7f;
+  margin: 0 28rpx 15rpx 0;
+}
+.journalList .headUser {
+  margin-left: 40rpx;
+  padding-top: 95rpx;
+  border-left: 4rpx solid #d2d2d2;
+  position: relative;
+}
+.journalList .headUser:first-child {
+  margin-top: 50rpx;
+  padding-top: 68rpx;
+} 
+.journalList .headUser .headImgs .imgs {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: -35rpx;
+  margin-top: -65rpx;
+  border-radius: 50%;
+}
+.journalList .headUser .headTitle {
+  width: 600rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 45rpx;
+}
+.journalList .headUser:first-child .headTitle {
+  top: 5rpx;
+}
+.headUser .headTitle .userName {
+  font-size: 28rpx;
+  color: #333; 
+}
+.headUser .headTitle .userLevel {
+  width: 54rpx;
+  height: 26rpx;
+  font-size: 18rpx;
+  color: #fff;
+  background: #7faf41;
+  margin-left: 15rpx;
+  padding: 5rpx 10rpx;
+}
+.headUser .headTitle .userFocus {
+  float: right;
+  margin-top: 11rpx;
+  font-size: 28rpx;
+  color: #7faf41;
+}
+.journalList .headUser .imageDetails {
+  /* width: 642rpx;  */
+  height: 535rpx;
+  margin-left: 15rpx;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  position: relative;
+}
+.headUser .imageDetails .summary {
+  font-size: 28rpx;
+  color: 333;
+  line-height: 36rpx;
+  /* margin-left: 22rpx; */
+}
+.headUser .imageDetails .img {
+  width: 585rpx;
+  height: 390rpx;
+  margin: 30rpx 0rpx;
+  position: relative;
+}
+.headUser .imageDetails .img .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.3);
+    background-size: cover;
+    mask-image: linear-gradient(120deg, transparent 60%, white 0%);
+}
+.headUser .imageDetails .img text {
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  top: 15rpx;
+  right: 40rpx;
+}
+.headUser .imageDetails .bottomIcon view {
+  display: inline-block;
+  position: relative;
+}
+.headUser .imageDetails .bottomIcon .date{
+  font-size: 20rpx;
+  color: #999;
+  line-height: 55rpx;margin-right: 30rpx;
+} 
+.headUser .imageDetails .bottomIcon image {
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;margin: 0 12rpx;vertical-align: middle;
+}
+/* .headUser .imageDetails .bottomIcon image:first-child {
+  padding-left:12rpx;
+} */
+.headUser .imageDetails .bottomIcon view text{
+  display: inline-block;
+  font-size: 22rpx;
+  color: #a2a2a2;
+  margin-right: 12rpx;
+}
+.headUser .imageDetails .bottomIcon date {
+  font-size: 20rpx;
+  color: #a2a2a2;
+}
+/* 鸟种 */
+.journalList .classify {
+  font-size: 24rpx;
+  color: #7f7f7f;
+  margin: 40rpx 0;
+  text-align: center;
+}
+.journalList .birdDetails .left {
+  display: inline-block;
+  margin-left: 6rpx;
+  float: left;
+  width: 340rpx;
+  height: 86rpx;
+  border-radius: 86rpx 0 0 86rpx;
+  background: #fff;
+  position: relative;clear: both;margin-bottom: 80rpx;
+}
+.journalList .birdDetails .right {
+  display: inline-block;
+  margin-right: 10rpx;
+  /* margin-top: 172rpx;
+  margin-bottom: 86rpx; */
+  float: right;
+  width: 340rpx;
+  height: 86rpx;
+  border-radius: 0 86rpx 86rpx 0;
+  background: #fff;
+  position: relative;clear: both;margin-bottom: 80rpx;
+}
+/* 鸟种左边 */
+.journalList .left .birdHead {
+  display: inline-block;
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+  border: 4rpx solid #ECECEC;
+  margin-top: 2rpx;
+  margin-left: 2rpx;
+}
+.journalList .birdDetails .left .name {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 86rpx;
+  margin-left: 18rpx;
+  position: absolute;
+}
+.journalList .left .calendarIcon {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ECECEC;
+  background: green;
+  position: absolute;
+  right: -32rpx;
+  top: 21rpx;
+}
+.journalList .left .line {
+  display: inline-block;
+  width: 4rpx;
+  height: 136rpx;
+  float: right;
+  margin-right: -8rpx;
+  background: #fff;
+}
+.journalList .left .date {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 86rpx;
+  position: absolute;
+  right: -260rpx;
+  top: 9rpx;
+}
+
+/* 鸟种右边 */
+.journalList .right .birdHead {
+  display: inline-block;
+  width: 74rpx;
+  height: 74rpx;
+  float: right;
+  border-radius: 50%;
+  border: 4rpx solid #ECECEC;
+  margin-right: 2rpx;
+  margin-top: 2rpx;
+}
+.journalList .birdDetails .right .name {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 86rpx;
+  margin-left: 40rpx;
+}
+.journalList .right .calendarIcon {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ECECEC;
+  background: green;
+  position: absolute;
+  left: -32rpx;
+  top: 21rpx;
+}
+.journalList .right .line {
+  display: inline-block;
+  width: 4rpx;
+  height: 258rpx;
+  background: #fff;
+  position: absolute;
+  right: 347rpx;
+  top: -86rpx;
+  z-index: -1;
+}
+.journalList .birdDetails .right .line {
+  height: 252rpx;
+}
+.journalList .right .date {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 86rpx;
+  position: absolute;
+  top: 0rpx;
+  left: -260rpx;
+}
+.list_box{overflow: hidden;}
+.journalList1{display: none;}
+.active{
+  display: block
+}
+.niao_title{overflow: hidden;margin: 20rpx auto 10rpx;}
+.img_box{position: relative;}
+.niao_nam{font-size: 24rpx;color: #fff;position: absolute;height: 36rpx;border-radius: 18rpx;background: rgba(0, 0, 0,0.5);padding:0 15rpx;line-height: 36rpx; left: 10rpx;bottom: 10rpx;}
+.niao_dingwei{font-size: 18rpx;color: #a2a2a2;margin-top: 6rpx;}
+.xcdate{font-size: 20rpx;color: #a2a2a2;margin-right: 20rpx;}

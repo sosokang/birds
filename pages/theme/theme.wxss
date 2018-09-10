@@ -1,0 +1,129 @@
+/* pages/theme/theme.wxss */
+.findBirdSearch {
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+}
+.findBirdSearch .search {
+  position: relative;
+}
+.findBirdSearch .search input {
+  display: inline-block;
+  width: 689rpx;
+  height: 66rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  margin: 20rpx 30rpx 11rpx;
+}
+.findBirdSearch .search image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 37rpx;
+  left: 52rpx;
+  z-index: 1;
+}
+.plc {
+  margin-left: 72rpx;
+  font-size: 28rpx;
+}
+.classTab {
+  padding: 0 30rpx;
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+.classTab view {
+  display: inline-block;
+  margin: 32rpx 40rpx 17rpx 16rpx;
+}
+.classTab .radio {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;        
+  border: 2rpx solid #D2D2D2;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.classTab .radio::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  background: #D2D2D2;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  /* transform:translate(-8rpx, -8rpx);
+  -webkit-transform:translate(-8rpx, -8rpx); */
+}
+.classTab .gradio {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;        
+  border: 2rpx solid #7faf41;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.classTab .gradio::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  background: #7faf41;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  /* transform:translate(-8rpx, -8rpx);
+  -webkit-transform:translate(-8rpx, -8rpx); */
+}
+
+.fs24 {
+  font-size: 24rpx;
+  color: #7f7f7f;
+}
+.c-7faf41 {
+  color: #7faf41;
+}
+.birdDetails {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.birdDetails .imgUrl {
+  height: 509rpx;
+}
+.birdDetails .summary {
+  padding: 0 30rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+  
+}
+.birdDetails .icons {
+  margin: 0 30rpx;
+  width: 690rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  border-top: 2rpx solid #ccc;
+  background: #fff;
+}
+.birdDetails .icons label {
+  display: inline-block;
+  margin-right: 40rpx;
+}
+.birdDetails .icons image {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.birdDetails .icons text {
+  font-size: 20rpx;
+  color: #a2a2a2;
+}

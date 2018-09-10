@@ -1,0 +1,46 @@
+<!--logs.wxml-->
+<view class="main">
+  <!-- <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block> -->
+  <view class="logbg">
+    <image src='../../img/logbg.jpg'></image>
+  </view>
+  <view class='logsContent '>
+    <view class='close1 rt' bindtap='houtui'>
+      <image src='../../img/close.png'></image>
+    </view>
+    <view class='logo lt'>
+      <image src='../../img/logo.png'></image>
+    </view>
+    <view class='logsInput clear'>
+      <view class='icon lt'>
+        <image src='../../img/phone@2x.png'></image>
+      </view>
+      <input placeholder='请输入手机号/用户名' placeholder-style='color:#999999' bindblur="user" cursor-spacing='20' />
+      <!-- <view class='close rt'>
+        <image src='../../img//Backspace@2x.png'></image>
+      </view> -->
+    </view>
+    <view class='logsInput clear' style='margin-top:40rpx; border-bottom: 1px solid #ececec;'>
+      <view class='icon lt'>
+        <image src='../../img/lock@2x.png'></image>
+      </view>
+      <input placeholder='请输入密码' placeholder-style='color:#999999' bindblur="pass" type='password' cursor-spacing='20'/>
+      <view class='close rt'>
+        <!-- <image src='../../img//Backspace@2x.png'></image> -->
+        <!-- <image wx:if="{{!eyes}}" src='../../img/close_eyes@2x.png' class='close'></image>
+        <image wx:else src='../../img/open_eyes@2x.png' class='open'></image> -->
+      </view>
+    </view>
+    <view class='paww clear'>
+      <button bindtap='reg' class='reg lt' open-type="getUserInfo" bindgetuserinfo="reg">立即注册</button>
+      <button bindtap='back' class='back rt' open-type="getUserInfo" bindgetuserinfo="back">忘记密码？</button>
+    </view>
+    <button class='btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+    <view class='txt'>登录后意味着同意
+      <text style="color:#333;">爱鸟网</text>的
+      <text style="color:#7faf41;" bindtap='yhxy'>《使用协议》</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view>
+  <view wx:for="{{shengjing_str}}" wx:key="*this">
+    <view class="shengjing {{item.checked ? 'checked' : '' }}" bindtap='onclick_sj' data-sj='{{item.name}}' data-id='{{item.id}}' wx:for-index="index" data-num="{{index}}">
+      <image src='{{item.imgUrl}}'></image>
+      {{item.name}}    
+    </view>
+  </view>
+</view>

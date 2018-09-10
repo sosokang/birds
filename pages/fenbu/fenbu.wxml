@@ -1,0 +1,2 @@
+<!--pages/fenbu/fenbu.wxml-->
+<image src='{{region_img}}' style='width:100%;height:{{region_img_height/region_img_width*750}}rpx'></image>

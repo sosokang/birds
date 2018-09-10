@@ -1,0 +1,182 @@
+<!--pages/my/my.wxml-->
+<import src="../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar,isok:isok}}" />
+
+<view class='main'>
+  <view class='main-bg'>
+    <image src='../../img/stock.jpg'></image>
+      <view class='head'>
+        <image clas="icons" src='{{head}}'></image>
+      </view>
+      <view class='user'>{{username}}</view>
+      <!--<view class='sign'>{{sign}}</view> -->
+    <view class='headBottom clear'>
+      <view class='' bindtap='guanzhupage'>关注 
+        <text>{{followNum}}</text>
+      </view>
+      <view class='' bindtap='fanspage'>粉丝 
+        <text>{{fansNum}}</text>
+      </view>
+      <view class=''>积分 
+        <text>{{credit}}</text>
+      </view>
+      <view class=''>菜鸟 
+        <text>Lv.{{level}}</text>
+      </view>
+    </view>
+  </view>  
+  <view>
+    <view class='mainContent clear'>
+      <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}} lt" id="1" data-id="1" bindtap="tab">
+        <image src='../../img/log_black@2x.png' wx:if="{{gu != '1'}}"></image>
+        <image src='../../img/log_green@2x.png' wx:else></image>
+        <text>日志{{articleNum}}</text>
+      </view>
+      <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}} lt" id="2" data-id="2" bindtap="tab">
+        <image src='../../img/collect_black@2x.png' wx:if="{{ gu != '2'}}"></image>
+        <image src='../../img/collect_green@2x.png' wx:else></image>
+        <text>收藏</text>
+      </view>
+      <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}} lt" id="3" data-id="3" bindtap="tab">
+        <image src='../../img/birds_black@2x.png' wx:if="{{gu != '3'}}"></image>
+        <image src='../../img/birds_green@2x.png' wx:else></image>
+        <text>鸟种{{birdspeciesNum}}</text>
+      </view>
+      <view class="{{tabArr.curHdIndex=='5'? 'active' : ''}} lt" id="5" data-id="5" bindtap="tab">
+        <image src='../../img/xiangce1.png' wx:if="{{ gu != '5'}}"></image>
+        <image src='../../img/xiangce.png' wx:else></image>
+        <text>相册</text>
+        <!-- <view class='red'></view> -->
+      </view>
+      <view class="{{tabArr.curHdIndex=='4'? 'active' : ''}} lt" id="4" data-id="4" bindtap="tab">
+        <image src='../../img/friends_black@2x.png' wx:if="{{ gu != '4'}}"></image>
+        <image src='../../img/friends_green@2x.png' wx:else></image>
+        <text>好友圈</text>
+        <!-- <view class='red'></view> -->
+      </view>
+      
+    </view>
+  </view>
+  <view>
+    <!-- 日志 -->
+    <view class="journalList {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+      <!-- <view class='tishi'>
+        您还有<text>3</text> 篇草稿没有完成 →
+      </view> -->
+      <view class='dates' wx:for="{{articleList}}" wx:key="{{item}}" bindtap='detail' data-tid='{{item.tid}}'> 
+        <view class='dateDay'>{{item.dateline_day}}</view>
+        <view class='dateMonth'>{{item.dateline_month}}月</view>
+        <view class='dateLine' style='{{index=="0" ? "padding-top:0;margin-top:30rpx;":""}}'>
+          <view class='yuan'></view>
+          <view class='details'>
+            <view class='titles'>{{item.subject}}</view>
+            <view class='conImgs' wx:if="{{item.imgUrl !== ''}}">
+              <image class='icons' src='{{item.imgUrl}}'></image>
+              <!-- <image src='../../img/eye.png' class='eye'></image>
+              <text>{{item.viewnum}}</text> -->
+            </view>
+            <view class='clear' wx:if="{{item.summary  !== '' }}">
+              <text class='birdName lt'>{{item.summary}}</text>
+              <view class='more'>
+                <image src='../../img/more@2x.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 收藏 -->
+    <view class="journalList  {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+      <view class='dates' wx:for="{{collectionList}}" wx:key="{{item}}" data-tid='{{item.tid}}' data-article_status='{{item.article_status}}' data-aid='{{item.aid}}' bindtap='detail'> 
+        <view class='dateDay'>{{item.dateline_day}}</view>
+        <view class='dateMonth'>{{item.dateline_month}}月</view>
+        <view class='dateLine'>
+          <view class='yuan'></view>
+          <view class='details'>
+            <view class='titles'>{{item.subject}}</view>
+            <view class='conImgs' wx:if="{{item.imgUrl !== ''}}">
+              <image class='icons' src='{{item.imgUrl}}'></image>
+              <!-- <image src='../../img/eye.png' class='eye'></image>
+              <text>{{item.viewnum}}</text> -->
+            </view>
+            <view class='clear'>
+              <text class='birdName lt'>{{item.summary}}</text>
+              <text class='author rt'>作者：{{item.author}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 鸟种 -->
+    <view class="journalList {{tabArr.curBdIndex=='3'? 'active' : ''}}" style=' width: 710rpx;margin: 0 20rpx;'>
+      <view class='classify'>您一共发现了{{birdNum}}种鸟，继续加油哦！</view>
+      <view class='birdDetails clear'>
+        <view class="{{index%2 == '0' ? 'left':'right'}}" wx:for="{{classList}}" wx:key="{{item}}" bindtap='xuan_niao' data-csp_code='{{item.csp_code}}'>
+          <image class='birdHead' src='{{item.bird_head}}'></image>
+          <text class='name'>{{item.name}}</text>
+          <view class='calendarIcon'>
+              <image src='../../img/pic_calendar@2x.png'></image>
+          </view>
+          <view class='line'></view>
+          <view class='date'>{{item.dateline_ymd}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 好友圈 -->
+    <view class="journalList clear {{tabArr.curBdIndex=='4'? 'active' : ''}}">
+      <view class='headUser clear' wx:for="{{detailsList}}" wx:key="{{item}}">
+        <view class='headImgs lt' bindtap='other' data-authorid='{{item.authorid}}'>
+          <image class='imgs' src='{{item.head}}'></image>
+        </view>
+        <view class='headTitle'>
+          <text class='userName'>{{item.author}}</text>
+          <!-- <text class='userLevel'>Lv.3</text> -->
+          <!-- <text class=''>关注</text> -->
+          <view class='userFocus' wx:if="{{item.is_follow==0}}" bindtap='guanzhu' data-authorid='{{item.authorid}}' data-index='{{index}}'>关注</view>
+      <view class='userFocus' wx:if="{{item.is_follow==1}}" bindtap='guanzhu1' data-authorid='{{item.authorid}}' data-index='{{index}}'>已关注</view>
+        </view>
+        <view class='imageDetails'>
+          <text class='zSanjiao'></text>
+          <view class='summary' bindtap='detail' data-tid='{{item.tid}}'>{{item.summary}}</view>
+          <view class='img' wx:if="{{item.imgUrl !=''}}" bindtap='detail' data-tid='{{item.tid}}'>
+            <image class='' src='{{item.imgUrl}}'></image>
+            <view class='mask'></view>
+            <!-- <image src='../../img/eye.png' class='eye'></image>
+            <text>{{item.viewnum}}</text> -->
+          </view>
+          <view class='bottomIcon'>
+        <image src='../../img/operat_icon_forward@2x.png' class='forward' bindtap='forward'></image>
+        <image src='../../img/operat_big_icon_collect@2x.png' class='collect' wx:if="{{item.isCollection==0}}" bindtap='collectArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{detailsList}}'></image>
+        <image src='../../img/operat_big_icon_collected@2x.png' class='collect' wx:if="{{item.isCollection>0}}" bindtap='collectArticle1' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{detailsList}}'></image>
+        <view class='' bindtap='comment' data-tid='{{item.tid}}' data-index='{{index}}'>
+          <image src='../../img/operat_icon_comment@2x.png' class='comment'></image>
+          <text wx:if="{{item.commentNum==0}}">评论</text>
+        <text wx:if="{{item.commentNum>0}}">{{item.commentNum}}</text>
+        </view>
+        <view class='' bindtap='upArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{detailsList}}'>
+          <image src='../../img/operat_big_icon_like@2x.png' class='like' wx:if="{{item.isUp==0}}"></image>
+          <image src='../../img/operat_big_icon_liked@2x.png' class='like' wx:if="{{item.isUp>0}}"></image>
+          <text wx:if="{{item.upNum==0}}">点赞</text>
+          <text wx:if="{{item.upNum>0}}">{{item.upNum}}</text>
+        </view>
+        <view class='rt date'>{{item.dateline}}</view>
+      </view>
+        </view>
+      </view>
+    </view>
+    <view class="journalList1 clear {{tabArr.curBdIndex=='5'? 'active' : ''}}">
+      <view wx:for="{{albumList}}" wx:key="{{item}}" class='list_box'>
+        <!-- <view class='niao_title'>
+          
+          <!-- <view class='lt niao_dingwei'>{{item.locale}}</view>
+          <view class='rt xcdate'>{{item.dateline}}</view>
+        </view> -->
+        <view wx:for="{{item.albumList}}" wx:for-item="suoyin" wx:key="suoyin" class='img_box' bindtap='imageDetails' data-item='{{item}}' data-index='{{index}}' data-birdName='{{item.birdName}}' data-niao='{{item.birdName}}' style="width:{{suoyin.imgWidth}}rpx;height:{{suoyin.imgHeight}}rpx;float:{{index%2 == '0' ? 'left':'right'}};margin-bottom:2rpx;">
+        <!-- {{item.birdName}} -->
+          <image src='{{suoyin.imgUrl}}'></image>
+          <view class=' niao_nam' wx:if="{{item.birdName}}">{{item.birdName}}</view>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>

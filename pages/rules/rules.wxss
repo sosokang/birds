@@ -1,0 +1,117 @@
+/* pages/rules/rules.wxss */
+
+page {
+  background: #ececec;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.main{margin-bottom: 40rpx;}
+.mainbg {
+  position: relative;
+  width: 100%;
+  height: 320rpx;margin-top: 20rpx;
+}
+
+.bgtxt {
+  position: absolute;
+  top: 113rpx;
+  left: 76rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.bginput {
+  position: absolute;
+  top: 170rpx;
+  left: 76rpx;
+  width: 598rpx;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 4rpx;
+  padding-left: 26rpx; 
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #08b062;
+  line-height: 80rpx;
+}
+.sousuo{
+  display: inline-block;
+  vertical-align:middle;
+  line-height: 70rpx;
+  height: 70rpx;
+  box-sizing: border-box;width: 500rpx;
+}
+.inputClass {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.search_img {
+  width: 32rpx;
+  height: 32rpx;
+  float: right;
+  padding-right: 36rpx;
+  padding-top: 30rpx;
+ }
+
+.rule-con {
+  width: 690rpx;
+  height: 220rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.rule-img {
+  width: 123rpx;
+  height: 123rpx;
+  padding: 50rpx 30rpx 0rpx 60rpx;
+}
+.rule-img image{
+  width: 123rpx;
+  height: 123rpx;
+}
+.rule-txt{padding-top: 68rpx;}
+.rule-txt text{
+  display: block;
+}
+.rule-txt1{font-size: 36rpx;
+  color: #333;padding-bottom: 12rpx;}
+.rule-txt2{font-size: 24rpx;
+  color: #7e7e7e;}
+.rule_arrow{float: right;width: 15rpx;height: 27rpx;padding-top: 97rpx;padding-right: 20rpx;}
+.rule-line {
+  width: 700rpx;
+  height: 29rpx;
+  display: inline-block;
+  padding-left: 20rpx;
+}
+
+.content {
+  width: 344rpx;
+  margin-left: 20rpx;
+  margin-top: 22rpx;
+  background: #fff;
+}
+
+.content-img {
+  width: 344rpx;
+  height: 277rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 15rpx 0;
+}
+
+.author {
+  font-size: 18rpx;
+  color: #a2a2a2;
+  text-align: center;
+  padding-bottom: 15rpx;
+}

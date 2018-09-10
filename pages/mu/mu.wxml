@@ -1,0 +1,41 @@
+<!--pages/mu/mu.wxml-->
+<view class='main'>
+  <view class='main-bg' bindtap='sousuo_box1'>
+    <view class='searchImg search_img'>
+      <image src='../../img/search_hui.png'></image>
+    </view>
+    <view class='input'>
+      <input placeholder='搜索' placeholder-class='inputClass' />
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-bg  clear" wx:for="{{mulist}}" wx:key="index" bindtap='mu_submit' data-index='{{index}}' wx:if="{{page==1}}">
+      <view class='con-img lt' style='background-image:url("{{item.nameBgImg}}")'>{{item.index_text}}</view>
+      <view class='con-txt lt'>{{item.subject}}</view>
+      <view class='con-jian rt'>
+        <image src='../../img/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class="content-bg  clear" wx:for="{{kelist}}" wx:key="index" bindtap='ke_submit' data-index='{{index}}' wx:if="{{page==2}}">
+      <view class='con-img lt' style='background-image:url("{{item.nameBgImg}}")'>{{item.index_text}}</view>
+      <view class='con-txt lt'>{{item.family}}</view>
+      <view class='con-jian rt'>
+        <image src='../../img/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class="content-bg  clear" wx:for="{{shulist}}" wx:key="index" bindtap='shu_submit' data-index='{{index}}' wx:if="{{page==3}}">
+      <view class='con-img lt' style='background-image:url("{{item.nameBgImg}}")'>{{item.index_text}}</view>
+      <view class='con-txt lt'>{{item.genus}}</view>
+      <view class='con-jian rt'>
+        <image src='../../img/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class='content-bg  clear' wx:for="{{zhonglist}}" wx:key="{{item}}" style='overflow:hidden;margin-bottom:4rpx;background:#fff;' bindtap='xuan_niao' data-name='{{item.name}}' data-name_la='{{item.name_la}}' data-csp_code='{{item.csp_code}}'>
+  <image src='{{item.bird_img}}' style='width:150rpx;height:100rpx;float:left;'></image>
+  <view class='niao_name'>
+    <view style='padding-top:20rpx;'>{{item.name}}</view>
+    <view class='name_la'>{{item.name_la}}</view>
+  </view>
+</view>
+  </view>
+</view>

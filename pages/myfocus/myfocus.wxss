@@ -1,0 +1,63 @@
+/* pages/myfans/myfans.wxss */
+.fansList {
+  width: 690rpx;
+  height: 500rpx;
+  padding: 0 30rpx;
+  border-top: 1px solid #ececec;
+}
+.fansList .fans {
+  height: 94rpx;
+  padding: 22rpx 0;
+  border-bottom: 1px solid #ececec;
+}
+.fansList .fans .img{
+  display: inline-block;
+  margin-right: 14rpx;
+  width: 94rpx;
+  height: 94rpx;
+  vertical-align: middle;
+}
+.fansList .fans .img image {
+  border-radius: 50%;
+}
+.fansList .fans .name {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #000;
+  height: 94rpx;
+  line-height: 94rpx;
+} 
+.fansList .fans .focus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  background: #7faf41;
+  margin-top: 22rpx;
+  border-radius: 5rpx;
+}
+.fansList .fans .focus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}
+.fansList .fans .nofocus {
+  display: inline-block;
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #a2a2a2;
+  text-align: center;
+  background: #ececec;
+  margin-top: 22rpx;
+  border-radius: 5rpx;
+}
+.fansList .fans .nofocus .guan {
+  display: inline-block;
+  width: 20rpx;
+  height: 17rpx;
+}

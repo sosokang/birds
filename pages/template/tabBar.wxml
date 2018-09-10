@@ -1,0 +1,14 @@
+<template name="tabBar">
+  <view class="flex-h flex-hsb tab-bar" style="color: {{tabBar.color}}; background: {{tarBar.backgroundColor}}; {{tabBar.position=='top'? 'top: 0' : 'bottom: 0'}}; ">
+    <block wx:for="{{tabBar.list}}" wx:key="pagePath">
+      <navigator url="{{item.pagePath}}" open-type="{{ item.vsActive ? 'redirectTo' : 'redirectTo' }}" class="menu-item" style="{{item.active? 'color: '+(item.selectedColor? item.selectedColor : tabBar.selectedColor) : ''}}">
+        <image src="{{item.selectedIconPath}}" wx:if="{{item.active}}"></image>
+        <image src="{{item.iconPath}}" wx:if="{{!item.active}}"></image>
+        <text>{{item.text}}</text>
+      </navigator>
+    </block>
+  </view>
+  <navigator url="../fabu/index" open-type='redirectTo' class="tabBarContent" bindtap='fabu'>
+        <image src='../../img/sub_release.png'></image>
+      </navigator> 
+</template>

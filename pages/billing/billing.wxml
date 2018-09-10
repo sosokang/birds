@@ -1,0 +1,81 @@
+<!--pages/billing/billing.wxml-->
+<view class='billing'>
+  <view class='headTitle'>
+    <view class='headTab'>
+      <text class="birds {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="1" data-id="1" data-type='100' bindtap="tab">鸟种</text>
+      <text class="logs {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="2" data-id="2" data-type='200' bindtap="tab">日志</text>
+      <text class="points {{tabArr.curHdIndex=='3'? 'active' : ''}}" id="3" data-id="3" data-type='300' bindtap="tab">积分</text>
+    </view>
+    <view class='total rt' wx:if="{{isYear==0}}">
+      <!-- <switch class='rt' checked="true" color='#ffad29'/> -->
+      <image src='../../img/zong.png' class='zong' bindtap="switch1Change"></image>
+    </view>
+    <view class='total rt' wx:if="{{isYear==1}}">
+      <!-- <switch class='rt' checked="" color='#ffad29' bindtap="switch1Change1"/>
+      <text class='nian'>年</text> -->
+      <image src='../../img/nian.png' class='zong' bindtap="switch1Change1"></image>
+    </view>
+  </view>
+  <view class='headImg'>
+    <image src='../../img/billbg.jpg'></image>
+    <view class='title_first'>{{title_first}}</view>
+    <view class='title_second'>{{title_second}}</view>
+  </view>
+  <view class='content'>
+    <view class="birdsDetail {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+      <view wx:for="{{user}}" wx:key="{{item}}">
+        <view class='fans'>
+          <text class='indexNum'></text>
+          <view class='img' bindtap='other' data-authorid='{{item.uid}}'>
+            <image src="{{item.head}}"></image>
+          </view>
+          <view class='name'>{{item.username}}</view>
+          <view class='number'><text>{{item.birdNum}}</text>种</view>
+          <view class='rt nofocus' wx:if="{{item.isFollow == 1 }}" bindtap='quxiaoguanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>
+            <image class='guan' src='../../img/guan.png'></image>
+            关注
+          </view>
+          <view class='rt focus' wx:else bindtap='guanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>关注</view>
+        </view>
+      </view>
+    </view>
+    <view class="logsDetail {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+      <view class="birdsDetail {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+        <view wx:for="{{user}}" wx:key="{{item}}">
+          <view class='fans'>
+            <text class='indexNum'></text>
+            <view class='img' bindtap='other' data-authorid='{{item.uid}}'>
+              <image src="{{item.head}}"></image>
+            </view>
+            <view class='name'>{{item.username}}</view>
+            <view class='number'><text>{{item.articleNum}}</text>篇</view>
+            <view class='rt nofocus' wx:if="{{item.isFollow == 1 }}" bindtap='quxiaoguanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>
+            <image class='guan' src='../../img/guan.png'></image>
+            关注
+          </view>
+          <view class='rt focus' wx:else bindtap='guanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>关注</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="pointsDetail {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+      <view class="birdsDetail {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+        <view wx:for="{{user}}" wx:key="{{item}}">
+          <view class='fans'>
+            <text class='indexNum'></text>
+            <view class='img' bindtap='other' data-authorid='{{item.uid}}'>
+              <image src="{{item.head}}"></image>
+            </view>
+            <view class='name'>{{item.username}}</view>
+            <view class='number'><text>{{item.picNum}}</text>分</view>
+            <view class='rt nofocus' wx:if="{{item.isFollow == 1}}" bindtap='quxiaoguanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>
+            <image class='guan' src='../../img/guan.png'></image>
+            关注
+          </view>
+          <view class='rt focus' wx:else bindtap='guanzhu' data-authorid='{{item.uid}}' data-index='{{index}}' data-user='{{user}}'>关注</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

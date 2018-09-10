@@ -1,0 +1,33 @@
+/* pages/photo/photo.wxss */
+.headTab {
+  display: inline-block;
+  margin: 20rpx auto;
+  /* width: 390rpx; */
+  height: 64rpx;
+  border: 4rpx solid #7faf41;
+  border-radius: 4rpx;
+}
+.headTab text {
+  display: inline-block;
+  width: 127rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  background: #fff;
+  border-right: 4rpx solid #7faf41;
+}
+.headTab text:last-child{
+  border-right: none;width: 131rpx;
+}
+.headTab text.active {
+  color: #fff;
+  background: #7faf41;
+}
+
+.niao_title{overflow: hidden;margin: 20rpx auto 10rpx;}
+.img_box{position: relative;}
+.niao_nam{font-size: 24rpx;color: #fff;position: absolute;height: 36rpx;border-radius: 18rpx;background: rgba(0, 0, 0,0.5);padding:0 15rpx;line-height: 36rpx; left: 10rpx;bottom: 10rpx;}
+.niao_dingwei{font-size: 18rpx;color: #a2a2a2;margin-top: 6rpx;}
+.xcdate{font-size: 20rpx;color: #a2a2a2;margin-right: 20rpx;}

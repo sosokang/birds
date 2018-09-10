@@ -1,0 +1,18 @@
+<!--pages/myfans/myfans.wxml-->
+<view class='fansList'>
+  <ul>
+    <li wx:for="{{focus}}" wx:key="{{item}}">
+      <view class='fans'>
+        <view class='img'>
+          <image src="{{item.head}}"></image>
+        </view>
+        <view class='name'>{{item.username}}</view>
+        <view class='rt nofocus' wx:if="{{item.isFollow == 1}}" bindtap='quxiaoguanzhu' data-authorid='{{item.uid}}' data-index='{{index}}'>
+          <image class='guan' src='../../img/guan.png'></image>
+          关注
+        </view>
+        <view class='rt focus' wx:if="{{item.isFollow == 0}}" bindtap='guanzhu' data-authorid='{{item.uid}}' data-index='{{index}}'>关注</view>
+      </view>
+    </li>
+  </ul>
+</view>

@@ -1,0 +1,129 @@
+<!--pages/findUser/findUser.wxml-->
+<view class='birdUser'>
+  <view class='search'>
+    <input focus='true' placeholder='请输入...' bindconfirm="onconfirm" placeholder-class='plc' confirm-type="搜索" bindinput='onconfirm'></input>
+    <image src='../../img/search_hui.png'></image>
+  </view>
+  <view class='classTab'>
+    <view class= "birds {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="1" data-id="1" bindtap="tab">
+      <text wx:if="{{ gu != 1}}">
+        <text class='radio'></text><text class='fs24'>鸟种</text>
+      </text>
+      <text wx:else>
+        <text class='gradio'></text><text class='fs24 c-7faf41'>鸟种</text>
+      </text>
+    </view>
+    <view class="topic {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="2" data-id="2" bindtap="tab">
+      <text wx:if="{{ gu != 2 }}">
+        <text class='radio'></text><text class='fs24'>话题</text>
+      </text>
+      <text wx:else>
+        <text class='gradio'></text><text class='fs24 c-7faf41'>话题</text>
+      </text>
+    </view>
+    <view class="user {{tabArr.curHdIndex=='3'? 'active' : ''}}" id="3" data-id="3" bindtap="tab">
+      <text wx:if="{{ gu != 3 }}">
+        <text class='radio'></text><text class='fs24'>用户</text>
+      </text>
+      <text wx:else>
+        <text class='gradio'></text><text class='fs24 c-7faf41'>用户</text>
+      </text>
+    </view>
+    <view class="information {{tabArr.curHdIndex=='4'? 'active' : ''}}" id="4" data-id="4" bindtap="tab">
+      <text wx:if="{{ gu != 4 }}">
+        <text class='radio'></text><text class='fs24'>资讯·装备</text>
+      </text>
+      <text wx:else>
+        <text class='gradio'></text><text class='fs24 c-7faf41'>资讯·装备</text>
+      </text>
+    </view>
+  </view>
+  <!-- 鸟种 -->
+  <view class="birdsClassify {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <!-- <view class='usSearch'>大家都在搜</view> -->
+    <!-- <view class='birdslists'>
+      <view class='item' wx:for="{{birdslists}}" wx:key="{{item}}">{{item.name}}</view>
+    </view> -->
+    <view class='niao_box' wx:for="{{birdslists}}" wx:key="{{item}}" style='overflow:hidden;margin-bottom:4rpx;background:#fff;' bindtap='xuan_niao' data-name='{{item.name}}' data-name_la='{{item.name_la}}' data-csp_code='{{item.csp_code}}' data-niao_num='1'>
+  <image src='{{item.bird_img}}' style='width:150rpx;height:100rpx;float:left;'></image>
+  <view class='niao_name'>
+    <view style='padding-top:20rpx;'>{{item.name}}</view>
+    <view class='name_la'>{{item.name_la}}</view>
+  </view>
+</view>
+  </view>
+  <!-- 话题 -->
+  <view class="birdDetails {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+    <view wx:for="{{birdDetails}}" wx:key="{{item}}" class='birdDetails_box'>
+      <image class='imgUrl' src='{{item.imgUrl}}'></image>
+      <view class='summary'>{{item.summary}}</view>
+      <view class='con-line'></view>
+    <view class='bottom clear'>
+      <view class='icon lt' bindtap='forward'>
+        <image src='../../img/operat_icon_forward@2x.png' class='operat lt'></image>
+        <text>转发</text>
+      </view>
+      <view class='icon lt' bindtap='collect'>
+        <image src='../../img/operat_big_icon_collect@2x.png' class='operat lt' wx:if="{{item.isCollection==0}}" bindtap='collectArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'></image>
+        <image src='../../img/operat_big_icon_collected@2x.png' class='operat lt' wx:if="{{item.isCollection>0}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class='icon lt' bindtap='comment'>
+        <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+        <text wx:if="{{item.commentNum==0}}">评论</text>
+        <text wx:if="{{item.commentNum>0}}">{{item.commentNum}}</text>
+      </view>
+      <view class='icon lt' bindtap='like'>
+        <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{item.isUp==0}}" bindtap='upArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'></image>
+        <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{item.isUp>0}}"></image>
+        <text wx:if="{{item.upNum==0}}">点赞</text>
+        <text wx:if="{{item.upNum>0}}">{{item.upNum}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+  <!-- 用户 -->
+  <view class="headuser {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+    <view class='user' wx:for="{{heads}}" wx:key="{{item}}">
+      <view class='img' bindtap='other' data-authorid='{{item.uid}}'>
+        <image src="{{item.head}}"></image>
+      </view>
+      <view class='name'>{{item.username}}</view>
+      <view class='rt nofocus' wx:if="{{item.isFollow == 1}}" bindtap='quxiaoguanzhu' data-authorid='{{item.uid}}' data-index='{{index}}'>
+        <image class='guan' src='../../img/guan.png'></image>
+        关注
+      </view>
+      <view class='rt focus' wx:if="{{item.isFollow != 1}}" bindtap='guanzhu' data-authorid='{{item.uid}}' data-index='{{index}}'>关注</view>
+    </view>
+  </view>
+  <!-- 资讯装备 -->
+  <view class="zixun {{tabArr.curBdIndex=='4'? 'active' : ''}}">
+    <view wx:for="{{zixunDetails}}" wx:key="{{item}}" class='zixun_box'>
+      <image class='imgUrl' src='{{item.img}}'></image>
+      <view class='summary'>{{item.summary}}</view>
+      <view class='con-line'></view>
+      <view class='bottom clear'>
+        <view class='icon lt' bindtap='forward'>
+          <image src='../../img/operat_icon_forward@2x.png' class='operat lt'></image>
+          <text>转发</text>
+        </view>
+        <view class='icon lt' bindtap='collect'>
+          <image src='../../img/operat_big_icon_collect@2x.png' class='operat lt' wx:if="{{item.isCollection==0}}" bindtap='collectArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'></image>
+          <image src='../../img/operat_big_icon_collected@2x.png' class='operat lt' wx:if="{{item.isCollection>0}}"></image>
+          <text>收藏</text>
+        </view>
+        <view class='icon lt' bindtap='comment'>
+          <image src='../../img/operat_big_icon_comment@2x.png' class='operat lt'></image>
+          <text wx:if="{{item.commentNum==0}}">评论</text>
+          <text wx:if="{{item.commentNum>0}}">{{item.commentNum}}</text>
+        </view>
+        <view class='icon lt' bindtap='like'>
+          <image src='../../img/operat_big_icon_like@2x.png' class='operat lt' wx:if="{{item.isUp==0}}" bindtap='upArticle' data-tid='{{item.tid}}' data-index='{{index}}' data-article_list='{{article_list}}'></image>
+          <image src='../../img/operat_big_icon_liked@2x.png' class='operat lt' wx:if="{{item.isUp>0}}"></image>
+          <text wx:if="{{item.upNum==0}}">点赞</text>
+          <text wx:if="{{item.upNum>0}}">{{item.upNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

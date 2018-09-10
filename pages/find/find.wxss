@@ -1,0 +1,212 @@
+/* pages/find/find.wxss */
+page {
+  background: #ececec;
+  padding-bottom: 100rpx;
+}
+
+.lt {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.search_img {
+  float: right;
+  margin: -29rpx 26rpx 0 0;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.searchImg {
+  margin: -46rpx 26rpx 0 0;
+}
+
+.search {
+  width: 92%;
+  height: 65rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  margin: 18rpx auto;
+  font-size: 26rpx;padding-left: 20rpx;
+}
+.search input{
+  height: 65rpx;
+  /* line-height: 65rpx; */
+  border-radius: 8rpx;
+  /* background: #fff; */
+  margin:auto;
+  font-size: 26rpx;
+}
+.inputClass {
+  display: inline-block;
+  font-size: 26rpx;
+  color: #a2a2a2;
+  margin-top: 4rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+}
+
+swiper {
+  width: 100%;
+  height: 402rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 402rpx;
+}
+
+.main-dh {
+  width: 100%;
+  background: #fff;
+  margin: 18rpx 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-con {
+  width: 25%;text-align: center;
+}
+
+.main-img {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  padding: 24rpx 0 8rpx 0;display: inline-block;
+}
+
+.txt {
+  font-size: 23rpx;
+  color: #7f7f7f;
+  padding: 0rpx 0rpx 30rpx 0;margin-left: -6rpx;
+}
+
+.content {
+  width: 100%;
+  background: #fff;
+  margin: 18rpx 0;
+}
+
+.content-head {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.head-img {
+  width: 73rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  margin: 24rpx 0;
+}
+.head-img image{
+  border-radius: 50%;
+}
+.con-name {
+  margin: 36rpx 0 0 28rpx;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.date {
+  font-size: 18rpx;
+  color: #afafaf;
+}
+
+.gz {
+  font-size: 28rpx;
+  color: #7faf41;
+  margin: -78rpx auto auto 0;
+}
+
+.con-img {
+  width: 100%;
+  height: 500rpx;
+}
+
+.con-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 30rpx;
+  margin: 30rpx auto 30rpx 30rpx;
+}
+
+.con-con {
+  color: #7f7f7f;
+  font-size: 30rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0 30rpx;
+}
+.con-line{
+  width: 91.2%;
+  height: 2rpx;
+  background: #ececec;
+  margin: 30rpx auto;
+}
+.bottom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom .icon {
+  margin-right: 44rpx;
+}
+
+.operat {
+  width: 45rpx;
+  height: 44rpx;
+  margin: 6rpx 13rpx 33rpx 0;
+}
+
+.bottom text {
+  font-size: 24rpx;
+  color: #999;
+}
+.zhuanfabox{height: 425rpx;width: 750rpx;position: fixed;bottom: 0;left:0;background: #fff;opacity: 0;z-index: 99999;}
+.arrowtop{-webkit-animation: fadeInUp 1s ease 0s 1 forwards;}
+@-webkit-keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;transform:none}
+}
+@keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);-ms-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;-ms-transform:none;transform:none}
+}
+.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+button[class="zhuanfa"]{
+  width:47rpx;
+  height: 46rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanfa.png');background-size: cover;float: left;margin-left: 30rpx;
+}
+.imageCount{float: right;margin-right: 30rpx;color: #fff;font-size: 30rpx;}
+button[class="zhuanfa"]::after {
+  border: 0;
+}
+button[class="zhuanfa1"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:100rpx 165rpx 50rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/creathaibao.png');background-size:  100% 100%;
+}
+button[class="zhuanfa1"]::after {
+  border: 0;
+}
+button[class="zhuanfa2"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:0 165rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanhaoyou.png');background-size: 100% 100%;
+}
+button[class="zhuanfa2"]::after {
+  border: 0;
+}

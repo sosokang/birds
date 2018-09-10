@@ -1,0 +1,82 @@
+/* pages/news/news.wxss */
+page{
+  background: #ececec;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+.main{
+  background: #fff;
+  height: 100%;
+  margin-top:20rpx;
+}
+.main-bg {
+  width: 100%;
+  height: 500rpx;
+  position: relative;
+}
+.title {
+  font-size: 32rpx;
+  color: #333;
+  margin: 30rpx;
+  padding-bottom: 26rpx;
+  line-height: 1.7em;
+  font-weight: 900;
+  border-bottom: 1px solid #ececec;
+} 
+
+.bottom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom .icon {
+  margin-right: 44rpx;
+}
+
+.operat {
+  width: 45rpx;
+  height: 44rpx;
+  margin: 22rpx 13rpx 33rpx 0;
+}
+
+.bottom text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 3.8em;
+}
+.zhuanfabox{height: 425rpx;width: 750rpx;position: fixed;bottom: 0;left:0;background: #fff;opacity: 0;z-index: 9999;}
+.arrowtop{-webkit-animation: fadeInUp 1s ease 0s 1 forwards;}
+@-webkit-keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;transform:none}
+}
+@keyframes fadeInUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);-ms-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+  100%{opacity:1;-webkit-transform:none;-ms-transform:none;transform:none}
+}
+.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+button[class="zhuanfa"]{
+  width:47rpx;
+  height: 46rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanfa.png');background-size: cover;float: left;margin-left: 30rpx;
+}
+.imageCount{float: right;margin-right: 30rpx;color: #fff;font-size: 30rpx;}
+button[class="zhuanfa"]::after {
+  border: 0;
+}
+button[class="zhuanfa1"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:100rpx 165rpx 50rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/creathaibao.png');background-size:  100% 100%;
+}
+button[class="zhuanfa1"]::after {
+  border: 0;
+}
+button[class="zhuanfa2"]{
+  width:422rpx;
+  height: 86rpx;
+  margin:0 165rpx;background:none;border: none;padding:0;background-image: url('https://x-space.fujifilm.com.cn/static/xiaochengxu/zhuanhaoyou.png');background-size: 100% 100%;
+}
+button[class="zhuanfa2"]::after {
+  border: 0;
+}

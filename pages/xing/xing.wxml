@@ -1,0 +1,69 @@
+<!--pages/xing/xing.wxml-->
+<view class='main'>
+  <view class='submit' wx:if="{{page!=5}}" bindtap='zuiba_submit'>完成</view>
+  <view class='main-big' wx:if="{{page==1}}">
+    <view class='head clear'>
+      <view class='num lt'>1</view>
+      <view class='txt lt'>它的体长（cm）?</view>
+    </view>
+    <view class='daxiao_box'>
+      <view wx:for="{{daxiao}}" wx:key="index" class='daxiao' bindtap='daxiao' data-index='{{index}}'>
+          <view class=''>
+            <image src='../../img/{{item.img}}.png' style='width:{{item.width}}rpx;height:{{item.height}}rpx;padding-left:{{item.left}}rpx;'></image>
+            <view class='line' style='z-index:{{item.zindex}}'><view class='yuandian' style='background:#{{item.color}}'></view><view class='xian' style='background:#{{item.color}}'></view><view class='yuandian' style='background:#{{item.color}};'></view></view>
+            <text style=''>{{item.text}}</text>
+          </view>
+      </view>
+    </view>
+    <view class='topic-btn' bindtap='daxiao_submit'>下一步</view>
+  </view>
+  <view class='main-bg' wx:if="{{page==2}}">
+    <view class='head clear'>
+      <view class='num lt'>2</view>
+      <view class='txt lt'>它的体型?</view>
+    </view>
+    <view class='topic clear'>
+      <view class='topic-list' wx:for="{{tixing}}" wx:key="index" bindtap="{{item.isclick==true? 'tixing' : ''}}" data-index='{{index}}'>
+        <image src='../../img/{{item.img}}.png'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <view class='topic-btn' bindtap='tixing_submit'>下一步</view>
+  </view>
+  <view class='mainColor' wx:if="{{page==3}}">
+    <view class='head clear'>
+      <view class='num lt'>3</view>
+      <view class='txt lt'>它的主要羽色 ?</view>
+    </view>
+    <view class='mainContent'>
+      <view class='topic-list2' wx:for="{{yanse}}" wx:key="index" bindtap="{{item.isclick==true? 'yanse' : ''}}" data-index='{{index}}'>
+        <image src='../../img/{{item.img}}.png' wx:if="{{item.img}}"></image>
+        <text wx:if="{{item.name}}" style="color:{{item.isclick==true?'#333' : '#999'}}">{{item.name}}</text>
+      </view>
+    </view>
+    <view class='topic-btn' bindtap='yanse_submit'>下一步</view>
+  </view>
+  <view class='mainBijiao' wx:if="{{page==4}}">
+    <view class='head clear'>
+      <view class='num lt'>4</view>
+      <view class='txt lt'>它的嘴与头之比?</view>
+    </view>
+    <view class='topic'>
+      <view class='topic-list1' wx:for="{{zuiba}}" wx:key="index" bindtap="{{item.isclick==true? 'zuiba' : ''}}" data-index='{{index}}'>
+        <image src='../../img/{{item.img}}.png' wx:if="{{item.img}}"></image>
+        <text wx:if="{{item.name}}">{{item.name}}</text>
+      </view>
+    </view>
+    <view class='topic-btn' bindtap='zuiba_submit'>下一步</view>
+  </view>
+  <view wx:if="{{page==5}}" class='niao_box'>
+    <view class='niao_box_bg' wx:for="{{niao_list}}" wx:key="{{item}}" style='overflow:hidden;margin-bottom:4rpx;background:#fff;' bindtap='xuan_niao' data-name='{{item.name}}' data-name_la='{{item.name_la}}' data-csp_code='{{item.csp_code}}' data-niao_num='1'>
+    <image src='{{item.bird_img}}' style='width:150rpx;height:100rpx;float:left;'></image>
+    <view class='niao_name'>
+      <view style='padding-top:20rpx;'>{{item.name}}</view>
+      <view class='name_la'>{{item.name_la}}</view>
+    </view>
+  </view>
+  
+</view>
+</view>

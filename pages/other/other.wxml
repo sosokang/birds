@@ -1,0 +1,93 @@
+<!--pages/other/other.wxml-->
+<view class='main'>
+  <view class='main-bg'>
+    <image src='../../img/stock.jpg'></image>
+    <view class='head clear'>
+      <image src='{{head}}'></image>
+      <view class='names lt'>{{username}}</view>
+      <view class='gunahzu lt' wx:if="{{isFollow==0}}" bindtap='guanzhu'>关注</view>
+      <view class='gunahzu lt' wx:if="{{isFollow==1}}" bindtap='quxiaoguanzhu'>已关注</view>
+    </view>
+    <view class='headBottom clear'>
+      <view class='' bindtap='guanzhu1'>关注
+        <text>{{followNum}}</text>
+      </view>
+      <view class='' bindtap='fanspage'>粉丝
+        <text>{{fansNum}}</text>
+      </view>
+      <view class=''>积分
+        <text>{{credit}}</text>
+      </view>
+      <view class=''>菜鸟
+        <text>Lv.{{level}}</text>
+      </view>
+    </view>
+    <view class='mainContent clear'>
+      <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}} lt nameContent" id="1" data-id="1" bindtap="tab">
+        <view class='nameTitle'>日志</view>
+        <view class='nameNum'>{{articleNum}}</view>
+      </view>
+      <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}} lt nameContent" id="2" data-id="2" bindtap="tab">
+      <view class='nameTitle'>鸟种</view>
+        <view class='nameNum'>{{birdspeciesNum}}</view>
+      </view>
+      <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}} lt nameContent" id="3" data-id="3" bindtap="tab">
+      <view class='nameTitle'>作品</view>
+        <view class='nameNum'>{{albumList.length}}</view>
+      </view>
+
+    </view>
+    <!-- <view class='red'></view> -->
+  
+     <view class="journalList {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+      <view class='dates' wx:for="{{articleList}}" wx:key="{{item}}" wx:key="{{item}}" bindtap='detail' data-tid='{{item.tid}}'> 
+          <view class='dateDay'>{{item.dateline_day}}</view>
+        <view class='dateMonth'>{{item.dateline_month}}月</view>
+          <view class='dateLine' style='{{index=="0" ? "padding-top:0;margin-top:30rpx;":""}}'>
+            <view class='yuan'></view>
+            <view class='details'>
+              <view class='titles'>{{item.subject}}</view>
+              <view class='conImgs' wx:if="{{item.imgUrl !== ''}}">
+                <image class='icons' src='{{item.imgUrl}}'></image>
+                <!-- <image src='../../img/eye.png' class='eye'></image>
+                <text>{{item.viewnum}}</text> -->
+              </view>
+              <view class='clear' wx:if="{{item.summary  !== '' }}">
+                <text class='birdName lt'>{{item.summary}}</text>
+                <view class='more'>
+                  <image src='../../img/more@2x.png'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+     </view>
+    <view class="journalList {{tabArr.curBdIndex=='2'? 'active' : ''}}" style='width:710rpx;margin:0 20rpx;'>
+      <view class='classify'>您一共发现了{{birdNum}}种鸟，继续加油哦！</view>
+        <view class='birdDetails clear'>
+        <view class="{{index%2 == '0' ? 'left':'right'}}" wx:for="{{classList}}" wx:key="{{item}}" wx:for="{{classList}}" wx:key="{{item}}" bindtap='xuan_niao' data-csp_code='{{item.csp_code}}'>
+          <image class='birdHead' src='{{item.bird_head}}'></image>
+          <text class='name'>{{item.name}}</text>
+          <view class='calendarIcon'>
+              <image src='../../img/pic_calendar@2x.png'></image>
+          </view>
+          <view class='line'></view>
+          <view class='date'>{{item.dateline_ymd}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="journalList1 {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+      <view wx:for="{{albumList}}" wx:key="{{item}}" class='list_box'>
+        <!-- <view class='niao_title'>
+          
+          <view class='lt niao_dingwei'>{{item.locale}}</view>
+          <view class='rt xcdate'>{{item.dateline}}</view>
+        </view> -->
+        <view wx:for="{{item.albumList}}" wx:for-item="suoyin" wx:key="suoyin" class='img_box' bindtap='imageDetails' data-item='{{item}}' data-index='{{index}}' data-birdName='{{item.birdName}}' data-niao='{{item.birdName}}' style="float:{{index%2 == '0' ? 'left':'right'}};">
+          <image src='{{suoyin.imgUrl}}' style="width:{{suoyin.imgWidth}}rpx;height:{{suoyin.imgHeight}}rpx;margin-bottom:2rpx;"></image>
+          <view class=' niao_nam' wx:if="{{item.birdName}}">{{item.birdName}}</view>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/theme/theme.wxml-->
+<view class='findBirdSearch'>
+  <view class='search'>
+    <input type='text' placeholder='请输入...' placeholder-class='plc'></input>
+    <image src='../../img/search_hui.png'></image>
+  </view>
+  <view class='classTab'>
+    <view class='birds'>
+      <text class='radio'></text><text class='fs24'>鸟种</text>
+    </view>
+    <view class='topic'>
+      <text class='gradio'></text><text class='fs24 c-7faf41'>话题</text>
+    </view>
+    <view class='user'>
+      <text class='radio'></text><text class='fs24'>用户</text>
+    </view>
+    <view class='information'>
+      <text class='radio'></text><text class='fs24'>资讯·装备</text>
+    </view>
+  </view>
+  <view class='birdDetails'>
+    <view wx:for="{{birdDetails}}" wx:key="{{item}}">
+      <image class='imgUrl' src='{{item.imgUrl}}'></image>
+      <view class='summary'>朝秦暮楚</view>
+      <view class='icons'>
+        <label>
+          <image  src='../../img/operat_icon_forward@2x.png'></image>
+          <text>转发</text>
+        </label>
+        <label>
+          <image src='../../img/operat_icon_collect@2x.png'></image>
+          <text>收藏</text>
+        </label>
+        <label>
+          <image src='../../img/operat_icon_comment@2x.png'></image>
+          <text>评论</text>
+        </label>
+        <label>
+          <image src='../../img/operat_icon_like@2x.png'></image>
+          <text>点赞</text>
+        </label>
+      </view>
+    </view>
+  </view>
+</view>
